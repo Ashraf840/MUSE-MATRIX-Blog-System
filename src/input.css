@@ -19,10 +19,10 @@
     width: 3rem;
 } */
 
-.author-pic {
+/* .author-pic {
     height: 3rem;
     width: 3rem;
-}
+} */
 
 /* Swiper Slider */
 .swiper {
@@ -53,4 +53,9 @@
 .tending-blog-pic-1 {
     height: 40rem;
     width: 40rem;
+}
+
+/* Custom Utilities */
+.text-xxs {
+    font-size: 10px;
 }
