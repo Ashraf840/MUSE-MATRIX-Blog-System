@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Matrix</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/272e010829.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="">
+
+    <!-- HEADER -->
+    <header class="bg-gray-700">
+        <div class="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
+            <div class="px-8 w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
+                <input type="text" class="search-input-field" placeholder="Search..." />
+            </div>
+            <div class="shirnk w-11/12 sm:order-2">
+                <a class="font-medium uppercase text-3xl">Muse Matrix</a>
+            </div>
+            <div class="w-96 order-3 flex justify-center">
+                <div class="flex gap-6">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="container mx-auto md:px-20 py-10">
+            <h1 class="font-medium text-4xl pb-12 text-center">Trending</h1>
+
+            <!-- Treanding Blog Post (Slider) -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide-1 -->
+                    <div class="swiper-slide">
+                        <div class="grid md:grid-cols-2">
+                            <div class="image hidden xl:inline-block">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="hero-trending-pic"
+                                    class="tending-blog-pic-1" />
+                            </div>
+                            <div class="info flex flex-col">
+                                <!-- Category; Published Date -->
+                                <div class="cat">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800 ">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <!-- Title -->
+                                <div class="title">
+                                    <a href="#"
+                                        class="text-3xl md:text-6xl font-medium text-gray-800 hover:text-gray-600">Your
+                                        most
+                                        unhappy customers
+                                        are your greatest source of
+                                        leaning</a>
+                                </div>
+                                <!-- Subtitle -->
+                                <p class="text-gray-500 py-3">
+                                    Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                    unorthographic life One dat however a small line of blind text by the name of Lorem
+                                    Ipsum
+                                    decided to leave for the far WoWorl of Grammar.
+                                </p>
+                                <!-- Author -->
+                                <div class="author flex py-5">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full">
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        footer
+    </footer>
+
+    <!-- JS Script -->
+    <!-- Swiper Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            speed: 500,
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+</body>
+
+</html>
