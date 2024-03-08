@@ -605,12 +605,12 @@ video {
   display: none;
 }
 
-.h-3{
-  height: 0.75rem;
-}
-
 .h-10{
   height: 2.5rem;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-11\/12{
@@ -619,14 +619,6 @@ video {
 
 .w-96{
   width: 24rem;
-}
-
-.w-3{
-  width: 0.75rem;
-}
-
-.w-10{
-  width: 2.5rem;
 }
 
 .flex-col{
@@ -659,9 +651,9 @@ video {
   background-color: rgb(94 234 212 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-4{
@@ -699,11 +691,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-32{
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -720,6 +707,11 @@ video {
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xs{
@@ -850,10 +842,54 @@ video {
   width: 40rem;
 }
 
-/* Custom Utilities */
+@media (min-width: 280px) and (max-width: 383px) {
+  /* Add your Galaxy Fold specific styles here */
 
-.text-xxs {
-  font-size: 10px;
+  .gf-nav-title{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .gf-nav-search-input-field-wrapper{
+    width: 15rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .gf-nav-search-input-field{
+    width: 12rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .gf-post-info{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .gf-post-title{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .gf-nav-socials{
+    width: 8rem;
+  }
+
+  .gf-post-subtitle{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .gf-post-xxs-text {
+    font-size: 0.675rem;
+  }
 }
 
 @media (min-width: 1280px){
@@ -916,16 +952,8 @@ video {
     order: 2;
   }
 
-  .sm\:h-8{
-    height: 2rem;
-  }
-
   .sm\:h-10{
     height: 2.5rem;
-  }
-
-  .sm\:w-8{
-    width: 2rem;
   }
 
   .sm\:w-10{
@@ -945,44 +973,9 @@ video {
     padding-bottom: 0px;
   }
 
-  .sm\:py-3{
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .sm\:py-4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .sm\:px-36{
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  .sm\:px-28{
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  .sm\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .sm\:px-16{
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .sm\:text-xs{
@@ -1000,6 +993,11 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
@@ -1008,21 +1006,6 @@ video {
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .md\:px-28{
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  .md\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:text-4xl{
@@ -1072,11 +1055,6 @@ video {
   .lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .lg\:text-xs{
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 }
 

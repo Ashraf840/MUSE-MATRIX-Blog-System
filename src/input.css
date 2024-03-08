@@ -55,7 +55,38 @@
     width: 40rem;
 }
 
-/* Custom Utilities */
-.text-xxs {
-    font-size: 10px;
+@media (min-width: 280px) and (max-width: 383px) {
+
+    /* Add your Galaxy Fold specific styles here */
+    .gf-nav-title {
+        @apply text-2xl;
+    }
+
+    .gf-nav-search-input-field-wrapper {
+        @apply px-6 w-60 py-3;
+    }
+
+    .gf-nav-search-input-field {
+        @apply px-2 py-1 w-48 text-xs;
+    }
+
+    .gf-post-info {
+        @apply px-14;
+    }
+
+    .gf-post-title {
+        @apply text-lg;
+    }
+
+    .gf-nav-socials {
+        @apply w-32;
+    }
+
+    .gf-post-subtitle {
+        @apply text-xs;
+    }
+
+    .gf-post-xxs-text {
+        font-size: 0.675rem;
+    }
 }
