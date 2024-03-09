@@ -601,10 +601,6 @@ video {
   display: grid;
 }
 
-.hidden{
-  display: none;
-}
-
 .w-11\/12{
   width: 91.666667%;
 }
@@ -615,6 +611,10 @@ video {
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -629,22 +629,30 @@ video {
   justify-content: center;
 }
 
+.gap-14{
+  gap: 3.5rem;
+}
+
 .gap-6{
   gap: 1.5rem;
+}
+
+.rounded{
+  border-radius: 0.25rem;
 }
 
 .rounded-full{
   border-radius: 9999px;
 }
 
+.bg-amber-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
+}
+
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-gray-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .px-20{
@@ -665,6 +673,11 @@ video {
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-16{
@@ -693,6 +706,11 @@ video {
 
 .text-center{
   text-align: center;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl{
@@ -859,6 +877,13 @@ body {
   height: 40rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* Latest Posts */
+
+.latest-post-pic {
+  width: 27rem;
+  height: 25rem;
 }
 
 /* 2XL */
@@ -1249,10 +1274,11 @@ body {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+}
 
-  .md\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+@media (min-width: 1024px){
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1260,9 +1286,5 @@ body {
   .xl\:mx-auto{
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .xl\:inline-block{
-    display: inline-block;
   }
 }

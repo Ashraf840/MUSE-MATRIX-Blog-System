@@ -79,6 +79,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Other sliders are generated dynamically using JS -->
                     <!-- Slide-2 -->
                     <div class="swiper-slide">
                         <div class="grid grid-cols-1 md:grid-cols-2">
@@ -154,25 +155,75 @@
         </div>
     </section>
 
+    <!-- Latest Post Section -->
+    <section class="container mx-auto md:px-20 py-10 bg-amber-100">
+        <h1 class="font-medium text-4xl py-12 text-center">Latest Posts</h1>
+
+        <!-- Grid Columns -->
+        <div id="latest-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+            <!-- Item-1 -->
+            <div class="item">
+                <div class="images">
+                    <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="latest-post-pic"
+                        class="rounded latest-post-pic" />
+                </div>
+                <div class="flex justifycenter flex-row py-4">
+                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                    <a href="#" class="text-orange-800 hover:text-orange-600">&nbsp; - March 7, 2024</a>
+                </div>
+                <div class="title">
+                    <a href="#" class="text-2xl font-medium text-gray-800 hover:text-gray-600">Your most unhappy
+                        customers are your
+                        greatest source of leaning</a>
+                </div>
+                <p class="text-gray-500 py-3">
+                    Even the all-powerful Pointing has no control about the blind texts it is an almost
+                    unorthographic life One dat however a small line of blind text by the name of Lorem
+                    Ipsum decided to leave for the far WoWorl of Grammar.
+                </p>
+                <div class="author flex py-5">
+                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1" class="author-pic rounded-full" />
+                    <div class="flex flex-col justify-center px-4">
+                        <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
+                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Other items are generated dynamically using JS -->
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
     </footer>
 
     <!-- JS Script -->
+    <script src="../build/js/iterative-html-elements/latest-post-items-chunk.js"></script>
+
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
+        // Initialize Swiper
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             speed: 500,
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
         });
+
+        // Iterate dummy latest posts
+        let latest_posts_div = document.querySelector('#latest-posts');
+        // console.log(latest_posts_div);
+        console.log(latest_post_items_chunk);
+        for (let index = 0; index < 5; index++) {
+            latest_posts_div.innerHTML += latest_post_items_chunk;
+        }
     </script>
+
+
 
 </body>
 
