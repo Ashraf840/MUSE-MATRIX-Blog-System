@@ -17,8 +17,8 @@
 <body>
 
     <!-- HEADER -->
-    <header class="bg-gray-700">
-        <div class="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
+    <header class="bg-gray-200">
+        <div class="xl:container xl:mx-auto flex flex-col items-center text-center sm:flex-row sm:justify-between py-3">
             <div
                 class="gf-nav-search-input-field-wrapper px-8 w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
                 <input type="text" class="gf-nav-search-input-field search-input-field" placeholder="Search..." />
@@ -36,48 +36,117 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="py-16">
-        <div class="container mx-auto md:px-20 py-10">
+        <div class="container mx-auto px-20 py-10">
             <h1 class="font-medium text-4xl pb-12 text-center">Trending</h1>
 
-            <div class="xl:grid-cols-2 grid">
-                <div class="image hidden md:flex lg:justify-center">
-                    <div>
-                        <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="hero-trending-pic"
-                            class="tending-blog-pic-1" />
+            <!-- Treanding Blog Post (Slider) -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide-1 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="hero-container-image">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="hero-trending-pic" />
+                            </div>
+                            <div class="info">
+                                <!-- Category; Published Date -->
+                                <div class="cat gf-post-xxs-text">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <!-- Title -->
+                                <div class="title">
+                                    <a href="#" class="gf-post-title title-anchor">Your most unhappy customers are your
+                                        greatest source of leaning</a>
+                                </div>
+                                <!-- Subtitle -->
+                                <p class="gf-post-subtitle subtitle py-3">
+                                    Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                    unorthographic life One dat however a small line of blind text by the name of Lorem
+                                    Ipsum decided to leave for the far WoWorl of Grammar.
+                                </p>
+                                <!-- Author -->
+                                <div class="author flex py-5">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="info gf-post-info flex flex-col px-16 md:px-0 lg:px-28 xl:px-10 md:py-10 xl:py-5">
-                    <!-- Category; Published Date -->
-                    <div class="cat gf-post-xxs-text text-xs xl:text-sm">
-                        <a href="#" class="text-orange-600 hover:text-orange-800 ">Business, Travel</a>
-                        <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                    <!-- Slide-2 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="hero-container-image">
+                                <img src="../assets/images/hero/hero-slider-img-2.jpg" alt="hero-trending-pic" />
+                            </div>
+                            <div class="info">
+                                <!-- Category; Published Date -->
+                                <div class="cat gf-post-xxs-text">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <!-- Title -->
+                                <div class="title">
+                                    <a href="#" class="gf-post-title title-anchor">Your most unhappy customers are your
+                                        greatest source of leaning</a>
+                                </div>
+                                <!-- Subtitle -->
+                                <p class="gf-post-subtitle subtitle py-3">
+                                    Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                    unorthographic life One dat however a small line of blind text by the name of Lorem
+                                    Ipsum decided to leave for the far WoWorl of Grammar.
+                                </p>
+                                <!-- Author -->
+                                <div class="author flex py-5">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Title -->
-                    <div class="title">
-                        <a href="#"
-                            class="gf-post-title text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-800 hover:text-gray-600">Your
-                            most
-                            unhappy customers
-                            are your greatest source of
-                            leaning</a>
-                    </div>
-                    <!-- Subtitle -->
-                    <p class="gf-post-subtitle py-3 text-sm lg:text-base">
-                        Even the all-powerful Pointing has no control about the blind texts it is an almost
-                        unorthographic life One dat however a small line of blind text by the name of Lorem
-                        Ipsum
-                        decided to leave for the far WoWorl of Grammar.
-                    </p>
-                    <!-- Author -->
-                    <div class="author flex py-4 lg:py-5">
-                        <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
-                            class="author-pic rounded-full h-10 w-10 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
-                        <div class="flex flex-col justify-center px-4">
-                            <a
-                                class="gf-post-xxs-text sm:text-xs lg:text-sm font-medium text-gray-800 hover:text-gray-600">Flying
-                                High</a>
-                            <span class="gf-post-xxs-text text-xs text-gray-500">CEO and Founder</span>
+                    <!-- Slide-3 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="hero-container-image">
+                                <img src="../assets/images/hero/hero-slider-img-3.jpg" alt="hero-trending-pic" />
+                            </div>
+                            <div class="info">
+                                <!-- Category; Published Date -->
+                                <div class="cat gf-post-xxs-text">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <!-- Title -->
+                                <div class="title">
+                                    <a href="#" class="gf-post-title title-anchor">Your most unhappy customers are your
+                                        greatest source of leaning</a>
+                                </div>
+                                <!-- Subtitle -->
+                                <p class="gf-post-subtitle subtitle py-3">
+                                    Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                    unorthographic life One dat however a small line of blind text by the name of Lorem
+                                    Ipsum decided to leave for the far WoWorl of Grammar.
+                                </p>
+                                <!-- Author -->
+                                <div class="author flex py-5">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,8 +155,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-teal-300">
-        footer
+    <footer>
     </footer>
 
     <!-- JS Script -->
