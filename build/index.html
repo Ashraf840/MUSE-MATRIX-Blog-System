@@ -155,33 +155,33 @@
         </div>
     </section>
 
-    <!-- Latest Post Section -->
-    <section class="container mx-auto md:px-20 py-10 bg-amber-100">
+    <!-- Latest Posts Section -->
+    <section class="container mx-auto md:px-20 py-10">
         <h1 class="font-medium text-4xl py-12 text-center">Latest Posts</h1>
 
         <!-- Grid Columns -->
-        <div id="latest-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div id="latest-posts" class="grid md:grid-cols-2 xl:grid-cols-3 gap-14">
             <!-- Item-1 -->
             <div class="item">
-                <div class="images">
+                <div class="images flex justify-center">
                     <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="latest-post-pic"
                         class="rounded latest-post-pic" />
                 </div>
-                <div class="flex justifycenter flex-row py-4">
+                <div class="flex justify-center flex-row py-4">
                     <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
                     <a href="#" class="text-orange-800 hover:text-orange-600">&nbsp; - March 7, 2024</a>
                 </div>
-                <div class="title">
+                <div class="title flex justify-start">
                     <a href="#" class="text-2xl font-medium text-gray-800 hover:text-gray-600">Your most unhappy
                         customers are your
                         greatest source of leaning</a>
                 </div>
-                <p class="text-gray-500 py-3">
+                <p class="subtitle text-gray-500 flex justify-start py-3">
                     Even the all-powerful Pointing has no control about the blind texts it is an almost
                     unorthographic life One dat however a small line of blind text by the name of Lorem
                     Ipsum decided to leave for the far WoWorl of Grammar.
                 </p>
-                <div class="author flex py-5">
+                <div class="author flex justify-start py-5">
                     <img src="../assets/images/hero/author.jpg" alt="author-pic-1" class="author-pic rounded-full" />
                     <div class="flex flex-col justify-center px-4">
                         <a class="text-md font-medium text-gray-800 hover:text-gray-600">Flying High</a>
@@ -217,7 +217,8 @@
         // Iterate dummy latest posts
         let latest_posts_div = document.querySelector('#latest-posts');
         // console.log(latest_posts_div);
-        console.log(latest_post_items_chunk);
+        // console.log(latest_post_items_chunk);
+
         for (let index = 0; index < 5; index++) {
             latest_posts_div.innerHTML += latest_post_items_chunk;
         }

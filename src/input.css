@@ -63,10 +63,18 @@ body {
 }
 
 /* Latest Posts */
-.latest-post-pic {
+#latest-posts .item .latest-post-pic {
     width: 27rem;
     height: 25rem;
 }
+
+/* #latest-posts .item .title {
+    @apply px-12
+}
+
+#latest-posts .item .subtitle {
+    @apply px-12
+} */
 
 /* 2XL */
 @media only screen and (min-width: 1535px) {
@@ -194,7 +202,7 @@ body {
     }
 
     .info {
-        @apply px-10 py-5
+        @apply px-2 py-5
     }
 
     .info .cat {
@@ -208,6 +216,11 @@ body {
     .info .subtitle {
         @apply text-sm
     }
+
+    #latest-posts .item {
+        padding: 0 6.5rem;
+    }
+
 }
 
 /* xs */
