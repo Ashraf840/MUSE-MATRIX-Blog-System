@@ -33,6 +33,10 @@ body {
     @apply block lg:inline-block
 }
 
+.info .cat {
+    @apply sm:text-xs xl:text-sm
+}
+
 .info .title-anchor {
     @apply font-medium text-gray-800 hover:text-gray-600
 }
@@ -62,19 +66,14 @@ body {
     object-fit: cover;
 }
 
-/* Latest Posts */
 #latest-posts .item .latest-post-pic {
     width: 27rem;
     height: 25rem;
 }
 
-/* #latest-posts .item .title {
-    @apply px-12
+#latest-posts .item .post-cat {
+    @apply text-sm flex justify-start flex-row py-4
 }
-
-#latest-posts .item .subtitle {
-    @apply px-12
-} */
 
 /* 2XL */
 @media only screen and (min-width: 1535px) {
@@ -84,10 +83,6 @@ body {
 
     .info {
         @apply px-10 py-5
-    }
-
-    .info .cat {
-        @apply text-sm
     }
 
     .info .title-anchor {
@@ -113,10 +108,6 @@ body {
         @apply px-10 py-5
     }
 
-    .info .cat {
-        @apply text-sm
-    }
-
     .info .title-anchor {
         @apply text-6xl
     }
@@ -140,10 +131,6 @@ body {
         @apply px-10 py-5
     }
 
-    .info .cat {
-        @apply text-xs
-    }
-
     .info .title-anchor {
         @apply text-5xl
     }
@@ -160,7 +147,7 @@ body {
 /* md */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
-        @apply px-0 py-0
+        @apply px-10 py-0
     }
 
     .swiper {
@@ -173,12 +160,12 @@ body {
         height: 10%
     }
 
-    .info {
-        @apply px-10 py-5
+    .swiper .swiper-slide-active {
+        width: 43.063rem !important;
     }
 
-    .info .cat {
-        @apply text-xs
+    .info {
+        @apply px-10 py-5
     }
 
     .info .title-anchor {
@@ -186,6 +173,10 @@ body {
     }
 
     .info .subtitle {
+        @apply text-sm
+    }
+
+    #latest-posts .item .subtitle {
         @apply text-sm
     }
 }
@@ -205,10 +196,6 @@ body {
         @apply px-2 py-5
     }
 
-    .info .cat {
-        @apply text-xs
-    }
-
     .info .title-anchor {
         @apply text-3xl
     }
@@ -221,6 +208,14 @@ body {
         padding: 0 6.5rem;
     }
 
+    #latest-posts .item .post-cat {
+        padding: .7rem 0;
+        @apply text-xs
+    }
+
+    #latest-posts .item .subtitle {
+        @apply text-sm
+    }
 }
 
 /* xs */
@@ -247,7 +242,7 @@ body {
     }
 
     .info .cat {
-        @apply text-xs
+        @apply text-xs flex flex-col py-4
     }
 
     .info .title-anchor {
@@ -257,12 +252,24 @@ body {
     .info .subtitle {
         @apply text-sm
     }
+
+    .swiper .info .author .author-title {
+        @apply text-base
+    }
+
+    #latest-posts .item {
+        padding: 0 2.5rem;
+    }
+
+    #latest-posts .item .post-cat {
+        @apply text-xs flex flex-col
+    }
 }
 
 /* 2xs */
 @media only screen and (min-width: 280px) and (max-width: 383px) {
     .container {
-        @apply px-10
+        @apply px-6
     }
 
     .swiper {
@@ -279,7 +286,28 @@ body {
     }
 
     .info {
-        @apply px-10 py-5 block
+        @apply px-4 py-5 block
+    }
+
+    .swiper .info .author .author-title {
+        @apply text-sm
+    }
+
+    #latest-posts .item {
+        padding: 0 1rem;
+    }
+
+    #latest-posts .item .subtitle {
+        @apply text-sm
+    }
+
+    #latest-posts .item .post-cat-xxs-text {
+        font-size: 0.675rem;
+        @apply flex flex-col
+    }
+
+    #latest-posts .item .author .author-title {
+        @apply text-sm
     }
 
     /* Add your Galaxy Fold specific styles here */
@@ -312,6 +340,7 @@ body {
     }
 
     .gf-post-xxs-text {
-        font-size: 0.675rem
+        font-size: 0.675rem;
+        @apply flex flex-col
     }
 }
