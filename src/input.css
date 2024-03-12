@@ -25,8 +25,12 @@ body {
     @apply grid grid-cols-2
 }
 
-.hero-container-image {
+.hero-container-image-wrapper {
     @apply block lg:inline-block
+}
+
+.hero-container-image {
+    height: 40rem;
 }
 
 .info {
@@ -34,11 +38,15 @@ body {
 }
 
 .info .cat {
-    @apply sm:text-xs xl:text-sm
+    @apply sm:text-xs xl:text-sm pb-2
 }
 
 .info .title-anchor {
     @apply font-medium text-gray-800 hover:text-gray-600
+}
+
+#latest-posts .item .subtitle {
+    @apply text-sm lg:text-base
 }
 
 .author .author-pic {
@@ -52,7 +60,7 @@ body {
 }
 
 .swiper-slide {
-    font-size: 18px;
+    /* font-size: 18px; */
     background: #fff;
     display: flex;
     justify-content: center;
@@ -62,17 +70,42 @@ body {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 40rem;
+    /* height: 40rem; */
     object-fit: cover;
 }
+
+/* Latest Posts */
+/* #latest-posts .item {
+    @apply bg-teal-400
+} */
 
 #latest-posts .item .latest-post-pic {
     width: 27rem;
     height: 25rem;
+    object-fit: cover;
 }
 
 #latest-posts .item .post-cat {
-    @apply text-sm flex justify-start flex-row py-4
+    @apply text-sm flex flex-row justify-start
+}
+
+/* Most Popular Posts */
+.popularPostsSwiper .popularPostsMedia .cat {
+    /* @apply sm:text-xs xl:text-sm; */
+    @apply py-4
+}
+
+.popularPostsSwiper .popularPostsMedia .popular-post-pic {
+    width: 100%;
+    height: 20rem
+}
+
+.popularPostsSwiper .popularPostsInfo .title {
+    @apply text-3xl md:text-4xl
+}
+
+.popularPostsSwiper .popularPostsInfo .subtitle {
+    @apply text-xs lg:text-base py-3 text-gray-500
 }
 
 /* 2XL */
@@ -93,8 +126,16 @@ body {
         @apply text-base
     }
 
-    .info .author .author-pic {
+    .author .author-pic {
         @apply h-12 w-12
+    }
+
+    .popularPostsSwiper {
+        height: 43rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-sm
     }
 }
 
@@ -119,6 +160,14 @@ body {
     .info .author .author-pic {
         @apply h-12 w-12
     }
+
+    .popularPostsSwiper {
+        height: 43rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-sm
+    }
 }
 
 /* lg */
@@ -141,6 +190,14 @@ body {
 
     .info .author .author-pic {
         @apply h-12 w-12
+    }
+
+    .popularPostsSwiper {
+        height: 46rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
     }
 }
 
@@ -176,7 +233,20 @@ body {
         @apply text-sm
     }
 
-    #latest-posts .item .subtitle {
+    /* #latest-posts .item .subtitle {
+        @apply text-sm
+    } */
+
+    .popularPostsSwiper {
+        height: 46rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .popular-post-pic {
+        /* height: 70rem; */
+        height: 30rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
         @apply text-sm
     }
 }
@@ -193,7 +263,7 @@ body {
     }
 
     .info {
-        @apply px-2 py-5
+        @apply px-0 py-5
     }
 
     .info .title-anchor {
@@ -205,7 +275,17 @@ body {
     }
 
     #latest-posts .item {
-        padding: 0 6.5rem;
+        /* padding: 0 6.5rem; */
+        padding: 0 0rem;
+        margin: 0;
+    }
+
+    /* .latest-posts .item {
+        @apply bg-orange-200
+    } */
+
+    #latest-posts .item .latest-post-pic {
+        width: 30rem;
     }
 
     #latest-posts .item .post-cat {
@@ -213,8 +293,12 @@ body {
         @apply text-xs
     }
 
-    #latest-posts .item .subtitle {
+    /* #latest-posts .item .subtitle {
         @apply text-sm
+    } */
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
     }
 }
 
@@ -233,12 +317,13 @@ body {
         height: 10%
     }
 
-    .hero-container-image {
+    .hero-container-image-wrapper {
         @apply hidden
     }
 
     .info {
-        @apply px-10 py-5
+        /* @apply px-10 py-5 */
+        @apply px-0 py-5
     }
 
     .info .cat {
@@ -258,11 +343,20 @@ body {
     }
 
     #latest-posts .item {
-        padding: 0 2.5rem;
+        /* padding: 0 2.5rem; */
+        padding: 0;
+    }
+
+    #latest-posts .item .latest-post-pic {
+        width: 34rem;
     }
 
     #latest-posts .item .post-cat {
         @apply text-xs flex flex-col
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
     }
 }
 
@@ -281,7 +375,7 @@ body {
         height: 10%
     }
 
-    .hero-container-image {
+    .hero-container-image-wrapper {
         @apply hidden
     }
 
@@ -297,9 +391,9 @@ body {
         padding: 0 1rem;
     }
 
-    #latest-posts .item .subtitle {
+    /* #latest-posts .item .subtitle {
         @apply text-sm
-    }
+    } */
 
     #latest-posts .item .post-cat-xxs-text {
         font-size: 0.675rem;
@@ -308,6 +402,11 @@ body {
 
     #latest-posts .item .author .author-title {
         @apply text-sm
+    }
+
+    .popularPostsSwiper .popularPostsMedia .popular-post-cat-xxs-text {
+        font-size: 0.675rem;
+        @apply flex flex-col
     }
 
     /* Add your Galaxy Fold specific styles here */

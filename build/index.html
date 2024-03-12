@@ -42,13 +42,14 @@
             <h1 class="font-medium text-4xl pb-12 text-center">Trending</h1>
 
             <!-- Treanding Blog Post (Slider) -->
-            <div class="swiper mySwiper">
+            <div class="swiper trendingPostsSwiper">
                 <div class="swiper-wrapper">
                     <!-- Slide-1 -->
                     <div class="swiper-slide">
                         <div class="grid grid-cols-1 md:grid-cols-2">
-                            <div class="hero-container-image">
-                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="hero-trending-pic" />
+                            <div class="hero-container-image-wrapper">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="hero-trending-pic"
+                                    class="hero-container-image" />
                             </div>
                             <div class="info">
                                 <!-- Category; Published Date -->
@@ -84,8 +85,9 @@
                     <!-- Slide-2 -->
                     <div class="swiper-slide">
                         <div class="grid grid-cols-1 md:grid-cols-2">
-                            <div class="hero-container-image">
-                                <img src="../assets/images/hero/hero-slider-img-2.jpg" alt="hero-trending-pic" />
+                            <div class="hero-container-image-wrapper">
+                                <img src="../assets/images/hero/hero-slider-img-2.jpg" alt="hero-trending-pic"
+                                    class="hero-container-image" />
                             </div>
                             <div class="info">
                                 <!-- Category; Published Date -->
@@ -120,8 +122,9 @@
                     <!-- Slide-3 -->
                     <div class="swiper-slide">
                         <div class="grid grid-cols-1 md:grid-cols-2">
-                            <div class="hero-container-image">
-                                <img src="../assets/images/hero/hero-slider-img-3.jpg" alt="hero-trending-pic" />
+                            <div class="hero-container-image-wrapper">
+                                <img src="../assets/images/hero/hero-slider-img-3.jpg" alt="hero-trending-pic"
+                                    class="hero-container-image" />
                             </div>
                             <div class="info">
                                 <!-- Category; Published Date -->
@@ -170,7 +173,7 @@
                     <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="latest-post-pic"
                         class="rounded latest-post-pic" />
                 </div>
-                <div class="post-cat post-cat-xxs-text text-sm flex justify-start flex-row py-4">
+                <div class="post-cat post-cat-xxs-text text-sm flex justify-start flex-row py-2">
                     <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
                     <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
                 </div>
@@ -196,19 +199,80 @@
         </div>
     </section>
 
+    <!-- Most Popular -->
+    <section class="py-10">
+        <div class="container mx-auto px-20 py-10">
+            <h1 class="font-medium text-4xl pb-12 text-center">Most Popular</h1>
+
+            <!-- Popular Posts Slider -->
+            <div class="swiper popularPostsSwiper">
+                <div id="popular-posts-wrapper" class="swiper-wrapper">
+                    <!-- Slide-1 -->
+                    <div class="swiper-slide">
+                        <div class="popularPostsMedia">
+                            <div class="image">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="popular-post-pic"
+                                    class="rounded popular-post-pic" />
+                            </div>
+                            <div class="cat popular-post-cat-xxs-text">
+                                <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                            </div>
+                        </div>
+                        <div class="popularPostsInfo">
+                            <div class="title">
+                                <a href="#" class="font-medium text-gray-800 hover:text-gray-600">Your most
+                                    unhappy
+                                    customers are your
+                                    greatest source of learning</a>
+                            </div>
+                            <p class="subtitle">
+                                Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                unorthographic life One dat however a small line of blind text by the name of Lorem
+                                Ipsum decided to leave for the far WoWorl of Grammar.
+                            </p>
+                            <div class="author flex justify-start pt-3 pb-1">
+                                <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                    class="author-pic rounded-full" />
+                                <div class="flex flex-col justify-center px-4">
+                                    <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">Flying
+                                        High</a>
+                                    <span class="text-xs text-gray-500">CEO and Founder</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other items are generated dynamically using JS -->
+                </div>
+            </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer>
+    <footer class="text-center py-10">
+        <!-- <h1 class="text-2xl">Footer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit minima optio laboriosam quisquam libero
+            modi, eos quam perspiciatis provident dolor nemo in. Voluptatem ex consequuntur esse excepturi molestiae
+            dolorum atque nostrum, quae dolorem eveniet repudiandae nisi in? Amet ex quaerat esse molestias ratione,
+            recusandae illum ea, numquam, laudantium accusantium magnam veritatis maxime provident molestiae consequatur
+            corporis exercitationem soluta doloribus consequuntur ipsa! Soluta laudantium quidem, magnam doloremque at
+            non ipsa dolor fugiat ducimus in voluptatum adipisci similique perspiciatis cumque dicta! Sapiente aperiam
+            rem ipsam pariatur possimus molestiae, recusandae nihil cupiditate voluptatibus reprehenderit asperiores
+            quis minus similique eveniet dolorem sequi deserunt!</p> -->
     </footer>
 
     <!-- JS Script -->
+    <!-- Latest posts (Dummy HTML chunk JS file) -->
     <script src="../build/js/iterative-html-elements/latest-post-items-chunk.js"></script>
+
+    <!-- Most popular posts (Dummy HTML chunk JS file) -->
+    <script src="../build/js/iterative-html-elements/most-popular-post-items-chunk.js"></script>
 
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Initialize Swiper
-        var swiper = new Swiper(".mySwiper", {
+        // Initialize Swiper (Hero Section)
+        var trendingPostsSwiper = new Swiper(".trendingPostsSwiper", {
             loop: true,
             speed: 500,
             // autoplay: {
@@ -217,12 +281,47 @@
             // },
         });
 
-        // Iterate dummy latest posts
+        // Iterate dummy posts (Latest Post Section)
         let latest_posts_div = document.querySelector('#latest-posts');
 
         for (let index = 0; index < 5; index++) {
             latest_posts_div.innerHTML += latest_post_items_chunk;
         }
+
+        // Iterate dummy posts (Most Popular Post Section)
+        let most_popular_posts_wrapper_div = document.querySelector('#popular-posts-wrapper');
+
+        for (let index = 0; index < 5; index++) {
+            most_popular_posts_wrapper_div.innerHTML += most_popular_post_items_chunk;
+        }
+
+        // Initialize Swiper (Most Popular Post Section)
+        var popularPostsSwiper = new Swiper(".popularPostsSwiper", {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Dynamically change the slidesPerView based on window screen size
+        window.addEventListener("resize", function () {
+            // Get the current window width
+            var windowWidth = window.innerWidth;
+
+            // Set different slidesPerView based on the window width
+            // if (windowWidth < 768) {
+            if (windowWidth < 1024) {
+                popularPostsSwiper.params.slidesPerView = 1; // Change to 1 slide per view
+                // popularPostsSwiper.params.width = 40;
+            } else {
+                popularPostsSwiper.params.slidesPerView = 2; // Reset to the initial value (3 slides per view)
+            }
+
+            // Update popularPostsSwiper
+            popularPostsSwiper.update();
+        });
     </script>
 
 

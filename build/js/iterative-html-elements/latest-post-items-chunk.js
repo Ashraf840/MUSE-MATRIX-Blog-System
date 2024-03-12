@@ -4,7 +4,7 @@ let latest_post_items_chunk = `
                     <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="latest-post-pic"
                         class="rounded latest-post-pic" />
                 </div>
-                <div class="post-cat post-cat-xxs-text text-sm flex justify-start flex-row py-4">
+                <div class="post-cat post-cat-xxs-text text-sm flex justify-start flex-row py-2">
                     <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
                     <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
                 </div>
