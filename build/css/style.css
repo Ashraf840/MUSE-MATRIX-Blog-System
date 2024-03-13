@@ -637,8 +637,16 @@ video {
   justify-content: center;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
 .gap-20{
   gap: 5rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
 }
 
 .gap-6{
@@ -656,11 +664,6 @@ video {
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-teal-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
 }
 
 .px-20{
@@ -1009,6 +1012,57 @@ body {
   }
 }
 
+/* Categorized Posts (Business, Travel) */
+
+.categorizedPostItem .image .categorized-post-pic,
+.categorizedPostItem .image .categorized-post-pic {
+  width: 20rem;
+  height: 10rem;
+}
+
+.categorizedPostItem .info,
+.categorizedPostItem .info{
+  padding: 0px;
+}
+
+.categorizedPostItem .info .cat{
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .categorizedPostItem .info .cat{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .categorizedPostItem .info .cat{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* .categorizedPostItem .categorizedBusinessPostsWrapper .categorizedBusinessPostsItem {
+    @apply py-1
+} */
+
+.categorizedPostItem .info .title .title-anchor,
+.categorizedPostItem .info .title .title-anchor{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.categorizedPostItem .info .author{
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.categorizedPostItem .info .author .author-pic {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 /* 2XL */
 
 @media only screen and (min-width: 1535px) {
@@ -1124,6 +1178,28 @@ body {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+    width: 30rem;
+    height: 12rem;
+  }
+
+  .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .categorizedPostItem .info .author{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .categorizedPostItem .info .author .author-pic{
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 /* md */
@@ -1184,6 +1260,18 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+    width: 30rem;
+    height: 13rem;
+  }
+
+  .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 /* sm */
@@ -1242,6 +1330,38 @@ body {
   .popularPostsSwiper .popularPostsMedia .cat{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .categorizedPostItem .info .author{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .categorizedPostItem .info .author .author-pic {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .categorizedPostItem .info .author .author-title{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+    width: 40rem;
+    height: 14rem;
+  }
+
+  .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .categorizedPostItem .info .author{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -1318,6 +1438,50 @@ body {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .categorizedPostItem .info,
+    .categorizedPostItem .info{
+    padding: 0px;
+  }
+
+  .categorizedPostItem .categorizedBusinessPostsItem,
+    .categorizedPostItem .categorizedTravelPostsItem{
+    gap: 0px;
+  }
+
+  .categorizedPostItem .info .cat {
+    font-size: 0.675rem;
+    padding-top: 0px;
+    padding-bottom: 0px
+  }
+
+  .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+    /* width: 40rem;
+        height: 14rem; */
+    display: none
+  }
+
+  .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .categorizedPostItem .info .author{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .categorizedPostItem .info .author .author-pic{
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .categorizedPostItem .info .author .author-title{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 /* 2xs */
@@ -1377,6 +1541,43 @@ body {
     font-size: 0.675rem;
     display: flex;
     flex-direction: column
+  }
+
+  .categorizedPostItem .categorizedBusinessPostsItem,
+    .categorizedPostItem .categorizedTravelPostsItem{
+    gap: 0px;
+  }
+
+  .categorizedPostItem .info .cat {
+    font-size: 0.675rem;
+    padding-top: 0px;
+    padding-bottom: 0px
+  }
+
+  .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic{
+    display: none;
+  }
+
+  .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .categorizedPostItem .info .author{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .categorizedPostItem .info .author .author-pic{
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .categorizedPostItem .info .author .author-title{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   /* Add your Galaxy Fold specific styles here */
@@ -1512,6 +1713,12 @@ body {
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

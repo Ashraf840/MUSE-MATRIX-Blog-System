@@ -41,7 +41,7 @@
         <div class="container mx-auto px-20 py-10">
             <h1 class="font-medium text-4xl pb-12 text-center">Trending</h1>
 
-            <!-- Treanding Blog Post (Slider) -->
+            <!-- Treanding Posts (Slider) -->
             <div class="swiper trendingPostsSwiper">
                 <div class="swiper-wrapper">
                     <!-- Slide-1 -->
@@ -199,7 +199,7 @@
         </div>
     </section>
 
-    <!-- Most Popular -->
+    <!-- Most Popular Posts (Slider) -->
     <section class="py-10">
         <div class="container mx-auto px-20 py-10">
             <h1 class="font-medium text-4xl pb-12 text-center">Most Popular</h1>
@@ -242,9 +242,85 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Other items are generated dynamically using JS -->
+                    <!-- Other sliders are generated dynamically using JS -->
                 </div>
             </div>
+    </section>
+
+    <!-- Categorized Posts -->
+    <section class="py-10">
+        <div class="container mx-auto px-20 py-10">
+            <div class="grid lg:grid-cols-2">
+                <!-- Category: Business -->
+                <div class="item categorizedPostItem">
+                    <h1 class="font-medium text-4xl py-12">Business</h1>
+                    <div id="categorized-business-posts-wrapper"
+                        class="flex flex-col gap-10 categorizedBusinessPostsWrapper">
+                        <!-- Categorized-posts-1 -->
+                        <div class="flex gap-5 categorizedBusinessPostsItem">
+                            <div class="image flex flex-col justify-start">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="categorized-post-pic"
+                                    class="rounded categorized-post-pic" />
+                            </div>
+                            <div class="info flex flex-col justify-center">
+                                <div class="cat">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="title-anchor">Your most unhappy customers are your
+                                        greatest source of learning</a>
+                                </div>
+                                <div class="author flex">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">Flying
+                                            High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other items are generated dynamically using JS -->
+                    </div>
+                </div>
+                <!-- Category: Travel -->
+                <div class="item categorizedPostItem">
+                    <h1 class="font-medium text-4xl py-12">Travel</h1>
+                    <div id="categorized-travel-posts-wrapper"
+                        class="flex flex-col gap-10 categorizedTravelPostsWrapper">
+                        <!-- Categorized-posts-1 -->
+                        <div class="flex gap-5 categorizedTravelPostsItem">
+                            <div class="image flex flex-col justify-start">
+                                <img src="../assets/images/hero/hero-slider-img-1.jpg" alt="categorized-post-pic"
+                                    class="rounded categorized-post-pic" />
+                            </div>
+                            <div class="info flex flex-col justify-center">
+                                <div class="cat">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" class="title-anchor">Your most unhappy customers are your
+                                        greatest source of learning</a>
+                                </div>
+                                <div class="author flex py-5">
+                                    <img src="../assets/images/hero/author.jpg" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">Flying
+                                            High</a>
+                                        <span class="text-xs text-gray-500">CEO and Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other items are generated dynamically using JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -267,20 +343,28 @@
     <!-- Most popular posts (Dummy HTML chunk JS file) -->
     <script src="../build/js/iterative-html-elements/most-popular-post-items-chunk.js"></script>
 
+    <!-- Categorized business posts (Dummy HTML chunk JS file) -->
+    <script src="../build/js/iterative-html-elements/categorized-business-post-items-chunk.js"></script>
+
+    <!-- Categorized travel posts (Dummy HTML chunk JS file) -->
+    <script src="../build/js/iterative-html-elements/categorized-travel-post-items-chunk copy.js"></script>
+
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+        // ----------------- Hero Section -----------------
         // Initialize Swiper (Hero Section)
         var trendingPostsSwiper = new Swiper(".trendingPostsSwiper", {
             loop: true,
             speed: 500,
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
         });
 
+        // ----------------- Latest Post Section -----------------
         // Iterate dummy posts (Latest Post Section)
         let latest_posts_div = document.querySelector('#latest-posts');
 
@@ -288,6 +372,7 @@
             latest_posts_div.innerHTML += latest_post_items_chunk;
         }
 
+        // ----------------- Most Popular Post Section -----------------
         // Iterate dummy posts (Most Popular Post Section)
         let most_popular_posts_wrapper_div = document.querySelector('#popular-posts-wrapper');
 
@@ -322,6 +407,20 @@
             // Update popularPostsSwiper
             popularPostsSwiper.update();
         });
+
+        // ----------------- Categorized Post Section -----------------
+        // ---------------------- Business Post -----------------------
+        let categorized_business_posts_wrapper_div = document.querySelector('#categorized-business-posts-wrapper');
+
+        for (let index = 0; index < 2; index++) {
+            categorized_business_posts_wrapper_div.innerHTML += categorized_business_post_items_chunk;
+        }
+        // ---------------------- Travel Post -----------------------
+        let categorized_travel_posts_wrapper_div = document.querySelector('#categorized-travel-posts-wrapper');
+
+        for (let index = 0; index < 2; index++) {
+            categorized_travel_posts_wrapper_div.innerHTML += categorized_travel_post_items_chunk;
+        }
     </script>
 
 
