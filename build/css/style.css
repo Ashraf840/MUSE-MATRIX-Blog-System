@@ -593,6 +593,10 @@ video {
   margin-right: auto;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
 .flex{
   display: flex;
 }
@@ -603,6 +607,10 @@ video {
 
 .w-11\/12{
   width: 91.666667%;
+}
+
+.w-9\/12{
+  width: 75%;
 }
 
 .w-96{
@@ -661,14 +669,33 @@ video {
   border-radius: 9999px;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .bg-gray-200{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-orange-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
 .px-20{
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4{
@@ -760,6 +787,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -773,9 +805,24 @@ video {
   text-transform: uppercase;
 }
 
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-50{
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-gray-800{
@@ -791,6 +838,12 @@ video {
 .text-orange-800{
   --tw-text-opacity: 1;
   color: rgb(154 52 18 / var(--tw-text-opacity));
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* Apply the 'poppins' fonts to all the components & their descendant components */
@@ -1063,6 +1116,12 @@ body {
   width: 2.5rem;
 }
 
+footer {
+  background-image: url('/assets/images/footer/footer.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
 /* 2XL */
 
 @media only screen and (min-width: 1535px) {
@@ -1200,6 +1259,11 @@ body {
     height: 2rem;
     width: 2rem;
   }
+
+  footer #subscribe-btn{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 /* md */
@@ -1271,6 +1335,13 @@ body {
     .categorizedPostItem .info .title .title-anchor{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  footer #subscribe-btn{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1362,6 +1433,13 @@ body {
   .categorizedPostItem .info .author{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  footer #subscribe-btn{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1482,6 +1560,13 @@ body {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  footer #subscribe-btn{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* 2xs */
@@ -1578,6 +1663,13 @@ body {
   .categorizedPostItem .info .author .author-title{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  footer #subscribe-btn{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   /* Add your Galaxy Fold specific styles here */
@@ -1708,6 +1800,11 @@ body {
 @media (min-width: 768px){
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .md\:py-5{

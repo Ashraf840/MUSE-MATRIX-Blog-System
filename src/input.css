@@ -142,6 +142,12 @@ body {
     width: 2.5rem;
 }
 
+footer {
+    background-image: url('/assets/images/footer/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
 /* 2XL */
 @media only screen and (min-width: 1535px) {
     .swiper {
@@ -252,6 +258,10 @@ body {
     .categorizedPostItem .info .author .author-pic {
         @apply h-8 w-8
     }
+
+    footer #subscribe-btn {
+        @apply px-16
+    }
 }
 
 /* md */
@@ -312,6 +322,10 @@ body {
     .categorizedPostItem .info .title .title-anchor,
     .categorizedPostItem .info .title .title-anchor {
         @apply text-3xl
+    }
+
+    footer #subscribe-btn {
+        @apply px-14 py-2
     }
 }
 
@@ -391,6 +405,10 @@ body {
 
     .categorizedPostItem .info .author {
         @apply py-10
+    }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2
     }
 }
 
@@ -489,6 +507,10 @@ body {
     .categorizedPostItem .info .author .author-title {
         @apply text-sm
     }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2 font-size
+    }
 }
 
 /* 2xs */
@@ -570,6 +592,10 @@ body {
 
     .categorizedPostItem .info .author .author-title {
         @apply text-sm
+    }
+
+    footer #subscribe-btn {
+        @apply px-10 py-1
     }
 
     /* Add your Galaxy Fold specific styles here */
