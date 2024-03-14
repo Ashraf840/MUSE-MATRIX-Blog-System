@@ -63,8 +63,24 @@ footer {
     background-position: bottom left;
 }
 
+footer .container {
+    width: 80rem;
+}
+
+footer .container .subscribe_newsletter {
+    @apply font-medium text-3xl
+}
+
+footer .container .subscribe_input_wrapper {
+    width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+    width: 57.3rem;
+}
+
 /* 2XL */
-@media only screen and (min-width: 1535px) {}
+@media only screen and (min-width: 1536px) {}
 
 /* xl */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
@@ -74,6 +90,14 @@ footer {
 
     .post {
         @apply py-8
+    }
+
+    footer .container {
+        width: 66.67rem;
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 47.75rem;
     }
 }
 
@@ -97,6 +121,18 @@ footer {
 
     .post .post-title {
         @apply font-bold text-4xl text-center pb-5
+    }
+
+    footer .container {
+        width: 53.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 38.2rem;
     }
 
     footer #subscribe-btn {
@@ -128,6 +164,18 @@ footer {
 
     .post .post-content {
         @apply text-base
+    }
+
+    footer .container {
+        width: 40.01rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl pt-12 pb-5
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 28.65rem;
     }
 
     footer #subscribe-btn {
@@ -163,6 +211,18 @@ footer {
 
     .post .post-content {
         @apply text-base
+    }
+
+    footer .container {
+        width: 33.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 23.875rem;
     }
 
     footer #subscribe-btn {
@@ -212,6 +272,18 @@ footer {
         @apply text-sm
     }
 
+    footer .container {
+        width: 20rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 14.325rem;
+    }
+
     footer #subscribe-btn {
         @apply px-12 py-2
     }
@@ -259,8 +331,25 @@ footer {
         @apply text-sm
     }
 
+    footer .container {
+        width: 14.58rem
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-lg
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 10.44rem;
+    }
+
     footer #subscribe-btn {
-        @apply px-10 py-1
+        @apply px-8 py-1
+    }
+
+    footer .container .copyright {
+        width: 12.5rem;
+        @apply text-sm
     }
 
     .gf-nav-title {

@@ -609,10 +609,6 @@ video {
   width: 91.666667%;
 }
 
-.w-9\/12{
-  width: 75%;
-}
-
 .w-96{
   width: 24rem;
 }
@@ -994,9 +990,27 @@ footer {
   background-position: bottom left;
 }
 
+footer .container {
+  width: 80rem;
+}
+
+footer .container .subscribe_newsletter{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+footer .container .subscribe_input_wrapper {
+  width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+  width: 57.3rem;
+}
+
 /* 2XL */
 
-@media only screen and (min-width: 1535px) {
+@media only screen and (min-width: 1536px) {
 }
 
 /* xl */
@@ -1010,6 +1024,14 @@ footer {
   .post{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  footer .container {
+    width: 66.67rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 47.75rem;
   }
 }
 
@@ -1042,6 +1064,19 @@ footer {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
+  }
+
+  footer .container {
+    width: 53.34rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 38.2rem;
   }
 
   footer #subscribe-btn{
@@ -1084,6 +1119,21 @@ footer {
   .post .post-content{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  footer .container {
+    width: 40.01rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    padding-top: 3rem;
+    padding-bottom: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 28.65rem;
   }
 
   footer #subscribe-btn{
@@ -1134,6 +1184,19 @@ footer {
   .post .post-content{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  footer .container {
+    width: 33.34rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 23.875rem;
   }
 
   footer #subscribe-btn{
@@ -1204,6 +1267,19 @@ footer {
   .post .post-content{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  footer .container {
+    width: 20rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 14.325rem;
   }
 
   footer #subscribe-btn{
@@ -1278,11 +1354,30 @@ footer {
     line-height: 1.25rem;
   }
 
+  footer .container {
+    width: 14.58rem
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 10.44rem;
+  }
+
   footer #subscribe-btn{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+  }
+
+  footer .container .copyright {
+    width: 12.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem
   }
 
   .gf-nav-title{

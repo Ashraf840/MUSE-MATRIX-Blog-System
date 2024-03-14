@@ -605,16 +605,8 @@ video {
   display: grid;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
 .w-11\/12{
   width: 91.666667%;
-}
-
-.w-9\/12{
-  width: 75%;
 }
 
 .w-96{
@@ -747,6 +739,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -757,10 +754,6 @@ video {
 
 .pb-3{
   padding-bottom: 0.75rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
 }
 
 .pt-1{
@@ -803,10 +796,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.font-bold{
-  font-weight: 700;
 }
 
 .font-medium{
@@ -1134,9 +1123,27 @@ footer {
   background-position: bottom left;
 }
 
+footer .container {
+  width: 80rem;
+}
+
+footer .container .subscribe_newsletter{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+footer .container .subscribe_input_wrapper {
+  width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+  width: 57.3rem;
+}
+
 /* 2XL */
 
-@media only screen and (min-width: 1535px) {
+@media only screen and (min-width: 1536px) {
   .swiper {
     width: 100%
   }
@@ -1210,6 +1217,14 @@ footer {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  footer .container {
+    width: 66.67rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 47.75rem;
+  }
 }
 
 /* lg */
@@ -1270,6 +1285,19 @@ footer {
   .categorizedPostItem .info .author .author-pic{
     height: 2rem;
     width: 2rem;
+  }
+
+  footer .container {
+    width: 53.34rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 38.2rem;
   }
 
   footer #subscribe-btn{
@@ -1347,6 +1375,21 @@ footer {
     .categorizedPostItem .info .title .title-anchor{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  footer .container {
+    width: 40.01rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    padding-top: 3rem;
+    padding-bottom: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 28.65rem;
   }
 
   footer #subscribe-btn{
@@ -1445,6 +1488,19 @@ footer {
   .categorizedPostItem .info .author{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  footer .container {
+    width: 33.34rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 23.875rem;
   }
 
   footer #subscribe-btn{
@@ -1573,6 +1629,19 @@ footer {
     line-height: 1.25rem;
   }
 
+  footer .container {
+    width: 20rem;
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 14.325rem;
+  }
+
   footer #subscribe-btn{
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1677,11 +1746,30 @@ footer {
     line-height: 1.25rem;
   }
 
+  footer .container {
+    width: 14.58rem
+  }
+
+  footer .container .subscribe_newsletter{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  footer .container .subscribe_input_wrapper input {
+    width: 10.44rem;
+  }
+
   footer #subscribe-btn{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+  }
+
+  footer .container .copyright {
+    width: 12.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem
   }
 
   /* Add your Galaxy Fold specific styles here */
@@ -1812,11 +1900,6 @@ footer {
 @media (min-width: 768px){
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:px-2{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .md\:px-20{
