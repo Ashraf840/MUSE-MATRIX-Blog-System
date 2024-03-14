@@ -1,0 +1,1114 @@
+
+Rebuilding...
+CssSyntaxError: tailwindcss: /media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/src/input.css:512:9: The `font-size` class does not exist. If `font-size` is a custom class, make sure it is defined within a `@layer` directive.
+    at Input.error (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/postcss/lib/input.js:106:16)
+    at AtRule.error (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/postcss/lib/node.js:115:32)
+    at processApply (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)
+    at /media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:538:9
+    at /media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/processTailwindFeatures.js:57:50
+    at async Object.Once (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/cli/build/plugin.js:250:17)
+    at async LazyResult.runAsync (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/postcss/lib/lazy-result.js:261:11)
+    at async Object.watch (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/cli/build/plugin.js:375:13)
+    at async build (/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/node_modules/tailwindcss/lib/cli/build/index.js:47:9) {
+  reason: 'The `font-size` class does not exist. If `font-size` is a custom class, make sure it is defined within a `@layer` directive.',
+  file: '/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/src/input.css',
+  source: "/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */\n" +
+    '\n' +
+    '@tailwind base;\n' +
+    '@tailwind components;\n' +
+    '@tailwind utilities;\n' +
+    '\n' +
+    "/* Apply the 'poppins' fonts to all the components & their descendant components */\n" +
+    'body {\n' +
+    '    width: 100% !important;\n' +
+    '    height: 100% !important;\n' +
+    '    margin: 0;\n' +
+    '    padding: 0\n' +
+    '}\n' +
+    '\n' +
+    '*>* {\n' +
+    "    font-family: 'Poppins', sans-serif\n" +
+    '}\n' +
+    '\n' +
+    '.search-input-field {\n' +
+    '    @apply mt-1 bg-white block w-60 px-3 py-2 border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;\n' +
+    '    @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500\n' +
+    '}\n' +
+    '\n' +
+    '.hero-container-grid {\n' +
+    '    @apply grid grid-cols-2\n' +
+    '}\n' +
+    '\n' +
+    '.hero-container-image-wrapper {\n' +
+    '    @apply block lg:inline-block\n' +
+    '}\n' +
+    '\n' +
+    '.hero-container-image {\n' +
+    '    height: 40rem;\n' +
+    '}\n' +
+    '\n' +
+    '.info {\n' +
+    '    @apply block lg:inline-block\n' +
+    '}\n' +
+    '\n' +
+    '.info .cat {\n' +
+    '    @apply sm:text-xs xl:text-sm pb-2\n' +
+    '}\n' +
+    '\n' +
+    '.info .title-anchor {\n' +
+    '    @apply font-medium text-gray-800 hover:text-gray-600\n' +
+    '}\n' +
+    '\n' +
+    '#latest-posts .item .subtitle {\n' +
+    '    @apply text-sm lg:text-base\n' +
+    '}\n' +
+    '\n' +
+    '.author .author-pic {\n' +
+    '    @apply h-10 w-10\n' +
+    '}\n' +
+    '\n' +
+    '/* Swiper Slider */\n' +
+    '.swiper {\n' +
+    '    height: 40rem;\n' +
+    '    width: 86rem;\n' +
+    '}\n' +
+    '\n' +
+    '.swiper-slide {\n' +
+    '    /* font-size: 18px; */\n' +
+    '    background: #fff;\n' +
+    '    display: flex;\n' +
+    '    justify-content: center;\n' +
+    '    align-items: center\n' +
+    '}\n' +
+    '\n' +
+    '.swiper-slide img {\n' +
+    '    display: block;\n' +
+    '    width: 100%;\n' +
+    '    /* height: 40rem; */\n' +
+    '    object-fit: cover;\n' +
+    '}\n' +
+    '\n' +
+    '/* Latest Posts */\n' +
+    '/* #latest-posts .item {\n' +
+    '    @apply bg-teal-400\n' +
+    '} */\n' +
+    '\n' +
+    '#latest-posts .item .latest-post-pic {\n' +
+    '    width: 27rem;\n' +
+    '    height: 25rem;\n' +
+    '    object-fit: cover;\n' +
+    '}\n' +
+    '\n' +
+    '#latest-posts .item .post-cat {\n' +
+    '    @apply text-sm flex flex-row justify-start\n' +
+    '}\n' +
+    '\n' +
+    '/* Most Popular Posts */\n' +
+    '.popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '    /* @apply sm:text-xs xl:text-sm; */\n' +
+    '    @apply py-4\n' +
+    '}\n' +
+    '\n' +
+    '.popularPostsSwiper .popularPostsMedia .popular-post-pic {\n' +
+    '    width: 100%;\n' +
+    '    height: 20rem\n' +
+    '}\n' +
+    '\n' +
+    '.popularPostsSwiper .popularPostsInfo .title {\n' +
+    '    @apply text-3xl md:text-4xl\n' +
+    '}\n' +
+    '\n' +
+    '.popularPostsSwiper .popularPostsInfo .subtitle {\n' +
+    '    @apply text-xs lg:text-base py-3 text-gray-500\n' +
+    '}\n' +
+    '\n' +
+    '/* Categorized Posts (Business, Travel) */\n' +
+    '.categorizedPostItem .image .categorized-post-pic,\n' +
+    '.categorizedPostItem .image .categorized-post-pic {\n' +
+    '    width: 20rem;\n' +
+    '    height: 10rem;\n' +
+    '}\n' +
+    '\n' +
+    '.categorizedPostItem .info,\n' +
+    '.categorizedPostItem .info {\n' +
+    '    @apply p-0\n' +
+    '}\n' +
+    '\n' +
+    '.categorizedPostItem .info .cat {\n' +
+    '    @apply sm:text-xs xl:text-sm pb-2\n' +
+    '}\n' +
+    '\n' +
+    '/* .categorizedPostItem .categorizedBusinessPostsWrapper .categorizedBusinessPostsItem {\n' +
+    '    @apply py-1\n' +
+    '} */\n' +
+    '\n' +
+    '.categorizedPostItem .info .title .title-anchor,\n' +
+    '.categorizedPostItem .info .title .title-anchor {\n' +
+    '    @apply text-xl\n' +
+    '}\n' +
+    '\n' +
+    '.categorizedPostItem .info .author {\n' +
+    '    @apply py-9\n' +
+    '}\n' +
+    '\n' +
+    '.categorizedPostItem .info .author .author-pic {\n' +
+    '    height: 2.5rem;\n' +
+    '    width: 2.5rem;\n' +
+    '}\n' +
+    '\n' +
+    'footer {\n' +
+    "    background-image: url('/assets/images/footer/footer.png');\n" +
+    '    background-repeat: no-repeat;\n' +
+    '    background-position: bottom left;\n' +
+    '}\n' +
+    '\n' +
+    '/* 2XL */\n' +
+    '@media only screen and (min-width: 1535px) {\n' +
+    '    .swiper {\n' +
+    '        width: 100%\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-10 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-6xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-base\n' +
+    '    }\n' +
+    '\n' +
+    '    .author .author-pic {\n' +
+    '        @apply h-12 w-12\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper {\n' +
+    '        height: 43rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* xl */\n' +
+    '@media only screen and (min-width: 1280px) and (max-width: 1535px) {\n' +
+    '    .swiper {\n' +
+    '        width: 100%\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-10 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-6xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-base\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .author .author-pic {\n' +
+    '        @apply h-12 w-12\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper {\n' +
+    '        height: 43rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* lg */\n' +
+    '@media only screen and (min-width: 1024px) and (max-width: 1279px) {\n' +
+    '    .swiper {\n' +
+    '        width: 100%\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-10 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-5xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-base\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .author .author-pic {\n' +
+    '        @apply h-12 w-12\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper {\n' +
+    '        height: 46rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-xs\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .image .categorized-post-pic,\n' +
+    '    .categorizedPostItem .image .categorized-post-pic {\n' +
+    '        width: 30rem;\n' +
+    '        height: 12rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .title .title-anchor,\n' +
+    '    .categorizedPostItem .info .title .title-anchor {\n' +
+    '        @apply text-lg\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author {\n' +
+    '        @apply py-4\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author .author-pic {\n' +
+    '        @apply h-8 w-8\n' +
+    '    }\n' +
+    '\n' +
+    '    footer #subscribe-btn {\n' +
+    '        @apply px-16\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* md */\n' +
+    '@media only screen and (min-width: 768px) and (max-width: 1023px) {\n' +
+    '    .container {\n' +
+    '        @apply px-10 py-0\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper {\n' +
+    '        width: 100%;\n' +
+    '        height: 10%;\n' +
+    '        margin: 0 auto\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper-wrapper {\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper .swiper-slide-active {\n' +
+    '        width: 43.063rem !important;\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-10 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-5xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    /* #latest-posts .item .subtitle {\n' +
+    '        @apply text-sm\n' +
+    '    } */\n' +
+    '\n' +
+    '    .popularPostsSwiper {\n' +
+    '        height: 46rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .popular-post-pic {\n' +
+    '        /* height: 70rem; */\n' +
+    '        height: 30rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .image .categorized-post-pic,\n' +
+    '    .categorizedPostItem .image .categorized-post-pic {\n' +
+    '        width: 30rem;\n' +
+    '        height: 13rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .title .title-anchor,\n' +
+    '    .categorizedPostItem .info .title .title-anchor {\n' +
+    '        @apply text-3xl\n' +
+    '    }\n' +
+    '\n' +
+    '    footer #subscribe-btn {\n' +
+    '        @apply px-14 py-2\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* sm */\n' +
+    '@media only screen and (min-width: 640px) and (max-width: 767px) {\n' +
+    '    .swiper {\n' +
+    '        width: 100%;\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper-wrapper {\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-0 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-3xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item {\n' +
+    '        /* padding: 0 6.5rem; */\n' +
+    '        padding: 0 0rem;\n' +
+    '        margin: 0;\n' +
+    '    }\n' +
+    '\n' +
+    '    /* .latest-posts .item {\n' +
+    '        @apply bg-orange-200\n' +
+    '    } */\n' +
+    '\n' +
+    '    #latest-posts .item .latest-post-pic {\n' +
+    '        width: 30rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item .post-cat {\n' +
+    '        padding: .7rem 0;\n' +
+    '        @apply text-xs\n' +
+    '    }\n' +
+    '\n' +
+    '    /* #latest-posts .item .subtitle {\n' +
+    '        @apply text-sm\n' +
+    '    } */\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-xs\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author {\n' +
+    '        @apply py-4\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author .author-pic {\n' +
+    '        height: 2rem;\n' +
+    '        width: 2rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author .author-title {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .image .categorized-post-pic,\n' +
+    '    .categorizedPostItem .image .categorized-post-pic {\n' +
+    '        width: 40rem;\n' +
+    '        height: 14rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .title .title-anchor,\n' +
+    '    .categorizedPostItem .info .title .title-anchor {\n' +
+    '        @apply text-2xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author {\n' +
+    '        @apply py-10\n' +
+    '    }\n' +
+    '\n' +
+    '    footer #subscribe-btn {\n' +
+    '        @apply px-12 py-2\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* xs */\n' +
+    '@media only screen and (min-width: 384px) and (max-width: 639px) {\n' +
+    '    .container {\n' +
+    '        @apply px-10\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper {\n' +
+    '        width: 100%;\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper-wrapper {\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .hero-container-image-wrapper {\n' +
+    '        @apply hidden\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        /* @apply px-10 py-5 */\n' +
+    '        @apply px-0 py-5\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .cat {\n' +
+    '        @apply text-xs flex flex-col py-4\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .title-anchor {\n' +
+    '        @apply text-3xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .info .subtitle {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper .info .author .author-title {\n' +
+    '        @apply text-base\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item {\n' +
+    '        /* padding: 0 2.5rem; */\n' +
+    '        padding: 0;\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item .latest-post-pic {\n' +
+    '        width: 34rem;\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item .post-cat {\n' +
+    '        @apply text-xs flex flex-col\n' +
+    '    }\n' +
+    '\n' +
+    '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+    '        @apply text-xs\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info,\n' +
+    '    .categorizedPostItem .info {\n' +
+    '        @apply p-0\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .categorizedBusinessPostsItem,\n' +
+    '    .categorizedPostItem .categorizedTravelPostsItem {\n' +
+    '        @apply gap-0\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .cat {\n' +
+    '        font-size: 0.675rem;\n' +
+    '        @apply py-0\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .image .categorized-post-pic,\n' +
+    '    .categorizedPostItem .image .categorized-post-pic {\n' +
+    '        /* width: 40rem;\n' +
+    '        height: 14rem; */\n' +
+    '        @apply hidden\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .title .title-anchor,\n' +
+    '    .categorizedPostItem .info .title .title-anchor {\n' +
+    '        @apply text-2xl\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author {\n' +
+    '        @apply py-8\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author .author-pic {\n' +
+    '        @apply h-8 w-8\n' +
+    '    }\n' +
+    '\n' +
+    '    .categorizedPostItem .info .author .author-title {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    footer #subscribe-btn {\n' +
+    '        @apply px-12 py-2 font-size\n' +
+    '    }\n' +
+    '}\n' +
+    '\n' +
+    '/* 2xs */\n' +
+    '@media only screen and (min-width: 280px) and (max-width: 383px) {\n' +
+    '    .container {\n' +
+    '        @apply px-6\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper {\n' +
+    '        width: 100%;\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper-wrapper {\n' +
+    '        height: 10%\n' +
+    '    }\n' +
+    '\n' +
+    '    .hero-container-image-wrapper {\n' +
+    '        @apply hidden\n' +
+    '    }\n' +
+    '\n' +
+    '    .info {\n' +
+    '        @apply px-4 py-5 block\n' +
+    '    }\n' +
+    '\n' +
+    '    .swiper .info .author .author-title {\n' +
+    '        @apply text-sm\n' +
+    '    }\n' +
+    '\n' +
+    '    #latest-posts .item'... 1790 more characters,
+  line: 512,
+  column: 9,
+  endLine: 512,
+  endColumn: 36,
+  input: {
+    column: 9,
+    endColumn: 36,
+    endLine: 512,
+    line: 512,
+    source: "/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */\n" +
+      '\n' +
+      '@tailwind base;\n' +
+      '@tailwind components;\n' +
+      '@tailwind utilities;\n' +
+      '\n' +
+      "/* Apply the 'poppins' fonts to all the components & their descendant components */\n" +
+      'body {\n' +
+      '    width: 100% !important;\n' +
+      '    height: 100% !important;\n' +
+      '    margin: 0;\n' +
+      '    padding: 0\n' +
+      '}\n' +
+      '\n' +
+      '*>* {\n' +
+      "    font-family: 'Poppins', sans-serif\n" +
+      '}\n' +
+      '\n' +
+      '.search-input-field {\n' +
+      '    @apply mt-1 bg-white block w-60 px-3 py-2 border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;\n' +
+      '    @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500\n' +
+      '}\n' +
+      '\n' +
+      '.hero-container-grid {\n' +
+      '    @apply grid grid-cols-2\n' +
+      '}\n' +
+      '\n' +
+      '.hero-container-image-wrapper {\n' +
+      '    @apply block lg:inline-block\n' +
+      '}\n' +
+      '\n' +
+      '.hero-container-image {\n' +
+      '    height: 40rem;\n' +
+      '}\n' +
+      '\n' +
+      '.info {\n' +
+      '    @apply block lg:inline-block\n' +
+      '}\n' +
+      '\n' +
+      '.info .cat {\n' +
+      '    @apply sm:text-xs xl:text-sm pb-2\n' +
+      '}\n' +
+      '\n' +
+      '.info .title-anchor {\n' +
+      '    @apply font-medium text-gray-800 hover:text-gray-600\n' +
+      '}\n' +
+      '\n' +
+      '#latest-posts .item .subtitle {\n' +
+      '    @apply text-sm lg:text-base\n' +
+      '}\n' +
+      '\n' +
+      '.author .author-pic {\n' +
+      '    @apply h-10 w-10\n' +
+      '}\n' +
+      '\n' +
+      '/* Swiper Slider */\n' +
+      '.swiper {\n' +
+      '    height: 40rem;\n' +
+      '    width: 86rem;\n' +
+      '}\n' +
+      '\n' +
+      '.swiper-slide {\n' +
+      '    /* font-size: 18px; */\n' +
+      '    background: #fff;\n' +
+      '    display: flex;\n' +
+      '    justify-content: center;\n' +
+      '    align-items: center\n' +
+      '}\n' +
+      '\n' +
+      '.swiper-slide img {\n' +
+      '    display: block;\n' +
+      '    width: 100%;\n' +
+      '    /* height: 40rem; */\n' +
+      '    object-fit: cover;\n' +
+      '}\n' +
+      '\n' +
+      '/* Latest Posts */\n' +
+      '/* #latest-posts .item {\n' +
+      '    @apply bg-teal-400\n' +
+      '} */\n' +
+      '\n' +
+      '#latest-posts .item .latest-post-pic {\n' +
+      '    width: 27rem;\n' +
+      '    height: 25rem;\n' +
+      '    object-fit: cover;\n' +
+      '}\n' +
+      '\n' +
+      '#latest-posts .item .post-cat {\n' +
+      '    @apply text-sm flex flex-row justify-start\n' +
+      '}\n' +
+      '\n' +
+      '/* Most Popular Posts */\n' +
+      '.popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '    /* @apply sm:text-xs xl:text-sm; */\n' +
+      '    @apply py-4\n' +
+      '}\n' +
+      '\n' +
+      '.popularPostsSwiper .popularPostsMedia .popular-post-pic {\n' +
+      '    width: 100%;\n' +
+      '    height: 20rem\n' +
+      '}\n' +
+      '\n' +
+      '.popularPostsSwiper .popularPostsInfo .title {\n' +
+      '    @apply text-3xl md:text-4xl\n' +
+      '}\n' +
+      '\n' +
+      '.popularPostsSwiper .popularPostsInfo .subtitle {\n' +
+      '    @apply text-xs lg:text-base py-3 text-gray-500\n' +
+      '}\n' +
+      '\n' +
+      '/* Categorized Posts (Business, Travel) */\n' +
+      '.categorizedPostItem .image .categorized-post-pic,\n' +
+      '.categorizedPostItem .image .categorized-post-pic {\n' +
+      '    width: 20rem;\n' +
+      '    height: 10rem;\n' +
+      '}\n' +
+      '\n' +
+      '.categorizedPostItem .info,\n' +
+      '.categorizedPostItem .info {\n' +
+      '    @apply p-0\n' +
+      '}\n' +
+      '\n' +
+      '.categorizedPostItem .info .cat {\n' +
+      '    @apply sm:text-xs xl:text-sm pb-2\n' +
+      '}\n' +
+      '\n' +
+      '/* .categorizedPostItem .categorizedBusinessPostsWrapper .categorizedBusinessPostsItem {\n' +
+      '    @apply py-1\n' +
+      '} */\n' +
+      '\n' +
+      '.categorizedPostItem .info .title .title-anchor,\n' +
+      '.categorizedPostItem .info .title .title-anchor {\n' +
+      '    @apply text-xl\n' +
+      '}\n' +
+      '\n' +
+      '.categorizedPostItem .info .author {\n' +
+      '    @apply py-9\n' +
+      '}\n' +
+      '\n' +
+      '.categorizedPostItem .info .author .author-pic {\n' +
+      '    height: 2.5rem;\n' +
+      '    width: 2.5rem;\n' +
+      '}\n' +
+      '\n' +
+      'footer {\n' +
+      "    background-image: url('/assets/images/footer/footer.png');\n" +
+      '    background-repeat: no-repeat;\n' +
+      '    background-position: bottom left;\n' +
+      '}\n' +
+      '\n' +
+      '/* 2XL */\n' +
+      '@media only screen and (min-width: 1535px) {\n' +
+      '    .swiper {\n' +
+      '        width: 100%\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-10 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-6xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-base\n' +
+      '    }\n' +
+      '\n' +
+      '    .author .author-pic {\n' +
+      '        @apply h-12 w-12\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper {\n' +
+      '        height: 43rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* xl */\n' +
+      '@media only screen and (min-width: 1280px) and (max-width: 1535px) {\n' +
+      '    .swiper {\n' +
+      '        width: 100%\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-10 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-6xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-base\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .author .author-pic {\n' +
+      '        @apply h-12 w-12\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper {\n' +
+      '        height: 43rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* lg */\n' +
+      '@media only screen and (min-width: 1024px) and (max-width: 1279px) {\n' +
+      '    .swiper {\n' +
+      '        width: 100%\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-10 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-5xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-base\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .author .author-pic {\n' +
+      '        @apply h-12 w-12\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper {\n' +
+      '        height: 46rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-xs\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .image .categorized-post-pic,\n' +
+      '    .categorizedPostItem .image .categorized-post-pic {\n' +
+      '        width: 30rem;\n' +
+      '        height: 12rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .title .title-anchor,\n' +
+      '    .categorizedPostItem .info .title .title-anchor {\n' +
+      '        @apply text-lg\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author {\n' +
+      '        @apply py-4\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author .author-pic {\n' +
+      '        @apply h-8 w-8\n' +
+      '    }\n' +
+      '\n' +
+      '    footer #subscribe-btn {\n' +
+      '        @apply px-16\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* md */\n' +
+      '@media only screen and (min-width: 768px) and (max-width: 1023px) {\n' +
+      '    .container {\n' +
+      '        @apply px-10 py-0\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper {\n' +
+      '        width: 100%;\n' +
+      '        height: 10%;\n' +
+      '        margin: 0 auto\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper-wrapper {\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper .swiper-slide-active {\n' +
+      '        width: 43.063rem !important;\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-10 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-5xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    /* #latest-posts .item .subtitle {\n' +
+      '        @apply text-sm\n' +
+      '    } */\n' +
+      '\n' +
+      '    .popularPostsSwiper {\n' +
+      '        height: 46rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .popular-post-pic {\n' +
+      '        /* height: 70rem; */\n' +
+      '        height: 30rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .image .categorized-post-pic,\n' +
+      '    .categorizedPostItem .image .categorized-post-pic {\n' +
+      '        width: 30rem;\n' +
+      '        height: 13rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .title .title-anchor,\n' +
+      '    .categorizedPostItem .info .title .title-anchor {\n' +
+      '        @apply text-3xl\n' +
+      '    }\n' +
+      '\n' +
+      '    footer #subscribe-btn {\n' +
+      '        @apply px-14 py-2\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* sm */\n' +
+      '@media only screen and (min-width: 640px) and (max-width: 767px) {\n' +
+      '    .swiper {\n' +
+      '        width: 100%;\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper-wrapper {\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-0 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-3xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item {\n' +
+      '        /* padding: 0 6.5rem; */\n' +
+      '        padding: 0 0rem;\n' +
+      '        margin: 0;\n' +
+      '    }\n' +
+      '\n' +
+      '    /* .latest-posts .item {\n' +
+      '        @apply bg-orange-200\n' +
+      '    } */\n' +
+      '\n' +
+      '    #latest-posts .item .latest-post-pic {\n' +
+      '        width: 30rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item .post-cat {\n' +
+      '        padding: .7rem 0;\n' +
+      '        @apply text-xs\n' +
+      '    }\n' +
+      '\n' +
+      '    /* #latest-posts .item .subtitle {\n' +
+      '        @apply text-sm\n' +
+      '    } */\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-xs\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author {\n' +
+      '        @apply py-4\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author .author-pic {\n' +
+      '        height: 2rem;\n' +
+      '        width: 2rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author .author-title {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .image .categorized-post-pic,\n' +
+      '    .categorizedPostItem .image .categorized-post-pic {\n' +
+      '        width: 40rem;\n' +
+      '        height: 14rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .title .title-anchor,\n' +
+      '    .categorizedPostItem .info .title .title-anchor {\n' +
+      '        @apply text-2xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author {\n' +
+      '        @apply py-10\n' +
+      '    }\n' +
+      '\n' +
+      '    footer #subscribe-btn {\n' +
+      '        @apply px-12 py-2\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* xs */\n' +
+      '@media only screen and (min-width: 384px) and (max-width: 639px) {\n' +
+      '    .container {\n' +
+      '        @apply px-10\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper {\n' +
+      '        width: 100%;\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper-wrapper {\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .hero-container-image-wrapper {\n' +
+      '        @apply hidden\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        /* @apply px-10 py-5 */\n' +
+      '        @apply px-0 py-5\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .cat {\n' +
+      '        @apply text-xs flex flex-col py-4\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .title-anchor {\n' +
+      '        @apply text-3xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .info .subtitle {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper .info .author .author-title {\n' +
+      '        @apply text-base\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item {\n' +
+      '        /* padding: 0 2.5rem; */\n' +
+      '        padding: 0;\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item .latest-post-pic {\n' +
+      '        width: 34rem;\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item .post-cat {\n' +
+      '        @apply text-xs flex flex-col\n' +
+      '    }\n' +
+      '\n' +
+      '    .popularPostsSwiper .popularPostsMedia .cat {\n' +
+      '        @apply text-xs\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info,\n' +
+      '    .categorizedPostItem .info {\n' +
+      '        @apply p-0\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .categorizedBusinessPostsItem,\n' +
+      '    .categorizedPostItem .categorizedTravelPostsItem {\n' +
+      '        @apply gap-0\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .cat {\n' +
+      '        font-size: 0.675rem;\n' +
+      '        @apply py-0\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .image .categorized-post-pic,\n' +
+      '    .categorizedPostItem .image .categorized-post-pic {\n' +
+      '        /* width: 40rem;\n' +
+      '        height: 14rem; */\n' +
+      '        @apply hidden\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .title .title-anchor,\n' +
+      '    .categorizedPostItem .info .title .title-anchor {\n' +
+      '        @apply text-2xl\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author {\n' +
+      '        @apply py-8\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author .author-pic {\n' +
+      '        @apply h-8 w-8\n' +
+      '    }\n' +
+      '\n' +
+      '    .categorizedPostItem .info .author .author-title {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    footer #subscribe-btn {\n' +
+      '        @apply px-12 py-2 font-size\n' +
+      '    }\n' +
+      '}\n' +
+      '\n' +
+      '/* 2xs */\n' +
+      '@media only screen and (min-width: 280px) and (max-width: 383px) {\n' +
+      '    .container {\n' +
+      '        @apply px-6\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper {\n' +
+      '        width: 100%;\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper-wrapper {\n' +
+      '        height: 10%\n' +
+      '    }\n' +
+      '\n' +
+      '    .hero-container-image-wrapper {\n' +
+      '        @apply hidden\n' +
+      '    }\n' +
+      '\n' +
+      '    .info {\n' +
+      '        @apply px-4 py-5 block\n' +
+      '    }\n' +
+      '\n' +
+      '    .swiper .info .author .author-title {\n' +
+      '        @apply text-sm\n' +
+      '    }\n' +
+      '\n' +
+      '    #latest-posts .item'... 1790 more characters,
+    url: 'file:///media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/src/input.css',
+    file: '/media/robin/Documents/PersonalWorks/Frontend/tailwind_blog_application_06032024/tailwind_blog_application_06032024/src/input.css'
+  },
+  plugin: 'tailwindcss'
+}

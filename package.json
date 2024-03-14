@@ -98,6 +98,7 @@
   },
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
+    "tailwind2": "npx tailwindcss -i ./src/page.css -o ./build/css/page.css --watch",
     "prettier": "npx prettier --write **/*.html"
   },
   "keywords": [],

@@ -605,10 +605,6 @@ video {
   display: grid;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
 .w-11\/12{
   width: 91.666667%;
 }
@@ -747,6 +743,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -757,10 +758,6 @@ video {
 
 .pb-3{
   padding-bottom: 0.75rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
 }
 
 .pt-1{
@@ -803,10 +800,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.font-bold{
-  font-weight: 700;
 }
 
 .font-medium{
@@ -917,215 +910,82 @@ body {
   --tw-ring-color: rgb(14 165 233 / var(--tw-ring-opacity));
 }
 
-.hero-container-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.hero-container-image-wrapper{
-  display: block;
-}
-
-@media (min-width: 1024px){
-  .hero-container-image-wrapper{
-    display: inline-block;
+@media (min-width: 768px){
+  .container{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
-.hero-container-image {
-  height: 40rem;
+.author .author-pic{
+  height: 5rem;
+  width: 5rem;
 }
 
-.info{
-  display: block;
-}
-
-@media (min-width: 1024px){
-  .info{
-    display: inline-block;
-  }
-}
-
-.info .cat{
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 640px){
-  .info .cat{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 1280px){
-  .info .cat{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-.info .title-anchor{
+.author .author-title{
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.info .title-anchor:hover{
+.author .author-title:hover{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-#latest-posts .item .subtitle{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 1024px){
-  #latest-posts .item .subtitle{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.author .author-pic{
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-/* Swiper Slider */
-
-.swiper {
-  height: 40rem;
-  width: 86rem;
-}
-
-.swiper-slide {
-  /* font-size: 18px; */
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  /* height: 40rem; */
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* Latest Posts */
-
-/* #latest-posts .item {
-    @apply bg-teal-400
-} */
-
-#latest-posts .item .latest-post-pic {
-  width: 27rem;
-  height: 25rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#latest-posts .item .post-cat{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-/* Most Popular Posts */
-
-.popularPostsSwiper .popularPostsMedia .cat {
-  /* @apply sm:text-xs xl:text-sm; */
-  padding-top: 1rem;
-  padding-bottom: 1rem
-}
-
-.popularPostsSwiper .popularPostsMedia .popular-post-pic {
-  width: 100%;
-  height: 20rem
-}
-
-.popularPostsSwiper .popularPostsInfo .title{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-@media (min-width: 768px){
-  .popularPostsSwiper .popularPostsInfo .title{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-
-.popularPostsSwiper .popularPostsInfo .subtitle{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+.author .author-designation{
+  font-size: 1rem;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1024px){
-  .popularPostsSwiper .popularPostsInfo .subtitle{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.post{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-/* Categorized Posts (Business, Travel) */
-
-.categorizedPostItem .image .categorized-post-pic,
-.categorizedPostItem .image .categorized-post-pic {
-  width: 20rem;
-  height: 10rem;
+.post .post-title{
+  padding-bottom: 1.25rem;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
 }
 
-.categorizedPostItem .info,
-.categorizedPostItem .info{
-  padding: 0px;
-}
-
-.categorizedPostItem .info .cat{
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 640px){
-  .categorizedPostItem .info .cat{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 1280px){
-  .categorizedPostItem .info .cat{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-/* .categorizedPostItem .categorizedBusinessPostsWrapper .categorizedBusinessPostsItem {
-    @apply py-1
-} */
-
-.categorizedPostItem .info .title .title-anchor,
-.categorizedPostItem .info .title .title-anchor{
+.post .post-subtitle{
+  text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.categorizedPostItem .info .author{
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+.post .post-image{
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.categorizedPostItem .info .author .author-pic {
-  height: 2.5rem;
-  width: 2.5rem;
+.post .post-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 footer {
@@ -1137,139 +997,51 @@ footer {
 /* 2XL */
 
 @media only screen and (min-width: 1535px) {
-  .swiper {
-    width: 100%
-  }
-
-  .info{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .info .title-anchor{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .info .subtitle{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .author .author-pic{
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .popularPostsSwiper {
-    height: 43rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 /* xl */
 
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-  .swiper {
-    width: 100%
+  .author{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
-  .info{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .info .title-anchor{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .info .subtitle{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .info .author .author-pic{
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .popularPostsSwiper {
-    height: 43rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .post{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
 /* lg */
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  .swiper {
-    width: 100%
+  .author{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
-  .info{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+  .post{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
-  .info .title-anchor{
-    font-size: 3rem;
-    line-height: 1;
+  .author .author-pic{
+    height: 4rem;
+    width: 4rem;
   }
 
-  .info .subtitle{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .info .author .author-pic{
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .popularPostsSwiper {
-    height: 46rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .categorizedPostItem .image .categorized-post-pic,
-    .categorizedPostItem .image .categorized-post-pic {
-    width: 30rem;
-    height: 12rem;
-  }
-
-  .categorizedPostItem .info .title .title-anchor,
-    .categorizedPostItem .info .title .title-anchor{
-    font-size: 1.125rem;
+  .author .author-title{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
-  .categorizedPostItem .info .author{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .categorizedPostItem .info .author .author-pic{
-    height: 2rem;
-    width: 2rem;
+  .post .post-title{
+    padding-bottom: 1.25rem;
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
   }
 
   footer #subscribe-btn{
@@ -1281,72 +1053,37 @@ footer {
 /* md */
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .container{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 10%;
-    margin: 0 auto
-  }
-
-  .swiper-wrapper {
-    height: 10%
-  }
-
-  .swiper .swiper-slide-active {
-    width: 43.063rem !important;
-  }
-
-  .info{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .author{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
 
-  .info .title-anchor{
-    font-size: 3rem;
-    line-height: 1;
+  .post{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
-  .info .subtitle{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .author .author-pic{
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
-  /* #latest-posts .item .subtitle {
-        @apply text-sm
-    } */
-
-  .popularPostsSwiper {
-    height: 46rem;
+  .author .author-title{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
-  .popularPostsSwiper .popularPostsMedia .popular-post-pic {
-    /* height: 70rem; */
-    height: 30rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  .categorizedPostItem .image .categorized-post-pic,
-    .categorizedPostItem .image .categorized-post-pic {
-    width: 30rem;
-    height: 13rem;
-  }
-
-  .categorizedPostItem .info .title .title-anchor,
-    .categorizedPostItem .info .title .title-anchor{
+  .post .post-title{
+    padding-bottom: 1.25rem;
+    text-align: center;
     font-size: 1.875rem;
     line-height: 2.25rem;
+    font-weight: 700;
+  }
+
+  .post .post-content{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   footer #subscribe-btn{
@@ -1360,91 +1097,43 @@ footer {
 /* sm */
 
 @media only screen and (min-width: 640px) and (max-width: 767px) {
-  .swiper {
-    width: 100%;
-    height: 10%
-  }
-
-  .swiper-wrapper {
-    height: 10%
-  }
-
-  .info{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .info .title-anchor{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .info .subtitle{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  #latest-posts .item {
-    /* padding: 0 6.5rem; */
-    padding: 0 0rem;
-    margin: 0;
-  }
-
-  /* .latest-posts .item {
-        @apply bg-orange-200
-    } */
-
-  #latest-posts .item .latest-post-pic {
-    width: 30rem;
-  }
-
-  #latest-posts .item .post-cat {
-    padding: .7rem 0;
-    font-size: 0.75rem;
-    line-height: 1rem
-  }
-
-  /* #latest-posts .item .subtitle {
-        @apply text-sm
-    } */
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .categorizedPostItem .info .author{
+  .author{
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  .categorizedPostItem .info .author .author-pic {
-    height: 2rem;
-    width: 2rem;
+  .post{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
-  .categorizedPostItem .info .author .author-title{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .author .author-pic{
+    height: 3rem;
+    width: 3rem;
   }
 
-  .categorizedPostItem .image .categorized-post-pic,
-    .categorizedPostItem .image .categorized-post-pic {
-    width: 40rem;
-    height: 14rem;
+  .author .author-title{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
-  .categorizedPostItem .info .title .title-anchor,
-    .categorizedPostItem .info .title .title-anchor{
+  .post .post-title{
+    padding-bottom: 1.25rem;
+    text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
+    font-weight: 500;
   }
 
-  .categorizedPostItem .info .author{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .post .post-subtitle{
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .post .post-content{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   footer #subscribe-btn{
@@ -1459,116 +1148,60 @@ footer {
 
 @media only screen and (min-width: 384px) and (max-width: 639px) {
   .container{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 10%
-  }
-
-  .swiper-wrapper {
-    height: 10%
-  }
-
-  .hero-container-image-wrapper{
-    display: none;
-  }
-
-  .info {
-    /* @apply px-10 py-5 */
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem
-  }
-
-  .info .cat{
-    display: flex;
-    flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 
-  .info .title-anchor{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .author{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
-  .info .subtitle{
+  .author-pic-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .author .author-pic{
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .author .author-title{
+    text-align: center;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 
-  .swiper .info .author .author-title{
+  .author .author-designation{
+    text-align: center;
+  }
+
+  .post{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .post .post-title{
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  .post .post-subtitle{
+    text-align: center;
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
-  #latest-posts .item {
-    /* padding: 0 2.5rem; */
-    padding: 0;
-  }
-
-  #latest-posts .item .latest-post-pic {
-    width: 34rem;
-  }
-
-  #latest-posts .item .post-cat{
-    display: flex;
-    flex-direction: column;
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .cat{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .categorizedPostItem .info,
-    .categorizedPostItem .info{
-    padding: 0px;
-  }
-
-  .categorizedPostItem .categorizedBusinessPostsItem,
-    .categorizedPostItem .categorizedTravelPostsItem{
-    gap: 0px;
-  }
-
-  .categorizedPostItem .info .cat {
-    font-size: 0.675rem;
-    padding-top: 0px;
-    padding-bottom: 0px
-  }
-
-  .categorizedPostItem .image .categorized-post-pic,
-    .categorizedPostItem .image .categorized-post-pic {
-    /* width: 40rem;
-        height: 14rem; */
-    display: none
-  }
-
-  .categorizedPostItem .info .title .title-anchor,
-    .categorizedPostItem .info .title .title-anchor{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .categorizedPostItem .info .author{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .categorizedPostItem .info .author .author-pic{
-    height: 2rem;
-    width: 2rem;
-  }
-
-  .categorizedPostItem .info .author .author-title{
+  .post .post-content{
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
@@ -1585,94 +1218,62 @@ footer {
 
 @media only screen and (min-width: 280px) and (max-width: 383px) {
   .container{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
-  .swiper {
-    width: 100%;
-    height: 10%
+  .author{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
-  .swiper-wrapper {
-    height: 10%
-  }
-
-  .hero-container-image-wrapper{
-    display: none;
-  }
-
-  .info{
-    display: block;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .author-pic-wrapper{
+    display: flex;
+    justify-content: center;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
 
-  .swiper .info .author .author-title{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  #latest-posts .item {
-    padding: 0 1rem;
-  }
-
-  /* #latest-posts .item .subtitle {
-        @apply text-sm
-    } */
-
-  #latest-posts .item .post-cat-xxs-text {
-    font-size: 0.675rem;
-    display: flex;
-    flex-direction: column
-  }
-
-  #latest-posts .item .author .author-title{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  .popularPostsSwiper .popularPostsMedia .popular-post-cat-xxs-text {
-    font-size: 0.675rem;
-    display: flex;
-    flex-direction: column
-  }
-
-  .categorizedPostItem .categorizedBusinessPostsItem,
-    .categorizedPostItem .categorizedTravelPostsItem{
-    gap: 0px;
-  }
-
-  .categorizedPostItem .info .cat {
-    font-size: 0.675rem;
-    padding-top: 0px;
-    padding-bottom: 0px
-  }
-
-  .categorizedPostItem .image .categorized-post-pic,
-    .categorizedPostItem .image .categorized-post-pic{
-    display: none;
-  }
-
-  .categorizedPostItem .info .title .title-anchor,
-    .categorizedPostItem .info .title .title-anchor{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .categorizedPostItem .info .author{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .categorizedPostItem .info .author .author-pic{
+  .author .author-pic{
     height: 2rem;
     width: 2rem;
   }
 
-  .categorizedPostItem .info .author .author-title{
+  .author .author-title{
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .author .author-designation{
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .post{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .post .post-title{
+    padding-bottom: 0.75rem;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  .post .post-subtitle{
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .post .post-content{
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
@@ -1683,8 +1284,6 @@ footer {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
-
-  /* Add your Galaxy Fold specific styles here */
 
   .gf-nav-title{
     font-size: 1.5rem;
@@ -1709,29 +1308,8 @@ footer {
     line-height: 1rem;
   }
 
-  .gf-post-info{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .gf-post-title{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .gf-nav-socials{
     width: 8rem;
-  }
-
-  .gf-post-subtitle{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .gf-post-xxs-text {
-    font-size: 0.675rem;
-    display: flex;
-    flex-direction: column
   }
 }
 
@@ -1812,11 +1390,6 @@ footer {
 @media (min-width: 768px){
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:px-2{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .md\:px-20{

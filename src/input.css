@@ -509,7 +509,7 @@ footer {
     }
 
     footer #subscribe-btn {
-        @apply px-12 py-2 font-size
+        @apply px-12 py-2
     }
 }
 
