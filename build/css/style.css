@@ -657,6 +657,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -667,6 +671,11 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.bg-amber-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200{
@@ -682,6 +691,11 @@ video {
 .bg-orange-400{
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-teal-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
 }
 
 .px-20{
@@ -1916,6 +1930,10 @@ footer .container .subscribe_input_wrapper input {
 @media (min-width: 1024px){
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:gap-16{
+    gap: 4rem;
   }
 }
 

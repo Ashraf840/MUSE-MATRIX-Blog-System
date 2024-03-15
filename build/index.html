@@ -354,24 +354,25 @@
 
     <!-- JS Script -->
     <!-- Latest posts (Dummy HTML chunk JS file) -->
-    <script src="../build/js/iterative-html-elements/latest-post-items-chunk.js"></script>
+    <script src="../build/js/iterative-html-elements/home-page/latest-post-items-chunk.js"></script>
 
     <!-- Most popular posts (Dummy HTML chunk JS file) -->
-    <script src="../build/js/iterative-html-elements/most-popular-post-items-chunk.js"></script>
+    <script src="../build/js/iterative-html-elements/home-page/most-popular-post-items-chunk.js"></script>
 
     <!-- Categorized business posts (Dummy HTML chunk JS file) -->
-    <script src="../build/js/iterative-html-elements/categorized-business-post-items-chunk.js"></script>
+    <script src="../build/js/iterative-html-elements/home-page/categorized-business-post-items-chunk.js"></script>
 
     <!-- Categorized travel posts (Dummy HTML chunk JS file) -->
-    <script src="../build/js/iterative-html-elements/categorized-travel-post-items-chunk copy.js"></script>
+    <script src="../build/js/iterative-html-elements/home-page/categorized-travel-post-items-chunk copy.js"></script>
 
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Custom JS -->
     <script>
         // ----------------- Hero Section -----------------
         // Initialize Swiper (Hero Section)
-        var trendingPostsSwiper = new Swiper(".trendingPostsSwiper", {
+        var trendingPostsSwiper = new Swiper('.trendingPostsSwiper', {
             loop: true,
             speed: 500,
             autoplay: {
@@ -397,7 +398,7 @@
         }
 
         // Initialize Swiper (Most Popular Post Section)
-        var popularPostsSwiper = new Swiper(".popularPostsSwiper", {
+        var popularPostsSwiper = new Swiper('.popularPostsSwiper', {
             slidesPerView: 2,
             spaceBetween: 40,
             pagination: {
@@ -407,7 +408,7 @@
         });
 
         // Dynamically change the slidesPerView based on window screen size
-        window.addEventListener("resize", function () {
+        window.addEventListener('resize', function () {
             // Get the current window width
             var windowWidth = window.innerWidth;
 
@@ -438,8 +439,6 @@
             categorized_travel_posts_wrapper_div.innerHTML += categorized_travel_post_items_chunk;
         }
     </script>
-
-
 
 </body>
 

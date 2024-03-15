@@ -57,6 +57,46 @@ body {
     @apply text-gray-600 text-lg flex flex-col gap-4
 }
 
+.relatedPostSection .relatedPostBody .relatedPostBodyFlex {
+    @apply flex gap-0 lg:gap-5
+}
+
+.relatedPostSection .relatedPostTitle {
+    @apply font-medium text-2xl md:text-3xl xl:text-4xl py-10
+}
+
+.relatedPostSection .relatedPostBody .image .related-post-pic {
+    width: 23rem;
+    height: 14rem;
+}
+
+.relatedPostSection .relatedPostBody .info .cat {
+    @apply sm:text-xs xl:text-sm pb-2
+}
+
+.relatedPostSection .relatedPostBody .info .title .title-anchor {
+    @apply text-3xl font-medium
+}
+
+.relatedPostSection .relatedPostBody .info .author {
+    padding-top: 3.66rem;
+    padding-bottom: 0;
+    @apply flex
+}
+
+.relatedPostSection .relatedPostBody .info .author .authorFlex {
+    @apply flex flex-col justify-center px-0 sm:px-4
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 4rem;
+    height: 4rem;
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-title {
+    @apply text-xl font-medium text-gray-800 hover:text-gray-600
+}
+
 footer {
     background-image: url('/assets/images/footer/footer.png');
     background-repeat: no-repeat;
@@ -92,6 +132,32 @@ footer .container .subscribe_input_wrapper input {
         @apply py-8
     }
 
+    /* .relatedPostSection .relatedPostBody .info {
+        height: 14rem;
+    } */
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        width: 19.17rem;
+        height: 11.67rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 2.6rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 3.33rem;
+        height: 3.33rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-xl font-medium text-gray-800 hover:text-gray-600
+    }
+
     footer .container {
         width: 66.67rem;
     }
@@ -121,6 +187,31 @@ footer .container .subscribe_input_wrapper input {
 
     .post .post-title {
         @apply font-bold text-4xl text-center pb-5
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        width: 15.34rem;
+        height: 9.34rem;
+        /* width: 16.34rem;
+        height: 10.9rem; */
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.4rem;
+        /* padding-top: 3rem; */
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-xl font-medium text-gray-800 hover:text-gray-600
     }
 
     footer .container {
@@ -164,6 +255,27 @@ footer .container .subscribe_input_wrapper input {
 
     .post .post-content {
         @apply text-base
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.83rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-lg font-medium text-gray-800 hover:text-gray-600
     }
 
     footer .container {
@@ -211,6 +323,27 @@ footer .container .subscribe_input_wrapper input {
 
     .post .post-content {
         @apply text-base
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.53rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-lg font-medium text-gray-800 hover:text-gray-600
     }
 
     footer .container {
@@ -272,6 +405,31 @@ footer .container .subscribe_input_wrapper input {
         @apply text-sm
     }
 
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .cat {
+        @apply text-xs flex flex-col
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        /* padding-top: .92rem; */
+        padding-top: 2rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-sm font-medium text-gray-800 hover:text-gray-600 text-left
+    }
+
     footer .container {
         width: 20rem;
     }
@@ -329,6 +487,30 @@ footer .container .subscribe_input_wrapper input {
 
     .post .post-content {
         @apply text-sm
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .cat {
+        @apply text-xs flex flex-col
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-lg
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: .67rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-sm font-medium text-gray-800 hover:text-gray-600 text-left
     }
 
     footer .container {

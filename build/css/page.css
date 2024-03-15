@@ -657,6 +657,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -667,6 +671,11 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.bg-amber-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200{
@@ -682,6 +691,11 @@ video {
 .bg-orange-400{
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-teal-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
 }
 
 .px-20{
@@ -984,6 +998,107 @@ body {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.relatedPostSection .relatedPostBody .relatedPostBodyFlex{
+  display: flex;
+  gap: 0px;
+}
+
+@media (min-width: 1024px){
+  .relatedPostSection .relatedPostBody .relatedPostBodyFlex{
+    gap: 1.25rem;
+  }
+}
+
+.relatedPostSection .relatedPostTitle{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px){
+  .relatedPostSection .relatedPostTitle{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .relatedPostSection .relatedPostTitle{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.relatedPostSection .relatedPostBody .image .related-post-pic {
+  width: 23rem;
+  height: 14rem;
+}
+
+.relatedPostSection .relatedPostBody .info .cat{
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .relatedPostSection .relatedPostBody .info .cat{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .relatedPostSection .relatedPostBody .info .cat{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.relatedPostSection .relatedPostBody .info .title .title-anchor{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+.relatedPostSection .relatedPostBody .info .author {
+  padding-top: 3.66rem;
+  padding-bottom: 0;
+  display: flex
+}
+
+.relatedPostSection .relatedPostBody .info .author .authorFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (min-width: 640px){
+  .relatedPostSection .relatedPostBody .info .author .authorFlex{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-pic {
+  width: 4rem;
+  height: 4rem;
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-title{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-title:hover{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 footer {
   background-image: url('/assets/images/footer/footer.png');
   background-repeat: no-repeat;
@@ -1026,6 +1141,42 @@ footer .container .subscribe_input_wrapper input {
     padding-bottom: 2rem;
   }
 
+  /* .relatedPostSection .relatedPostBody .info {
+        height: 14rem;
+    } */
+
+  .relatedPostSection .relatedPostBody .image .related-post-pic {
+    width: 19.17rem;
+    height: 11.67rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    padding-top: 2.6rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 3.33rem;
+    height: 3.33rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+  }
+
   footer .container {
     width: 66.67rem;
   }
@@ -1064,6 +1215,41 @@ footer .container .subscribe_input_wrapper input {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
+  }
+
+  .relatedPostSection .relatedPostBody .image .related-post-pic {
+    width: 15.34rem;
+    height: 9.34rem;
+    /* width: 16.34rem;
+        height: 10.9rem; */
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    padding-top: 1.4rem;
+    /* padding-top: 3rem; */
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 2.66rem;
+    height: 2.66rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 
   footer .container {
@@ -1119,6 +1305,37 @@ footer .container .subscribe_input_wrapper input {
   .post .post-content{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .relatedPostSection .relatedPostBody .image .related-post-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    padding-top: 1.83rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 2.66rem;
+    height: 2.66rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 
   footer .container {
@@ -1184,6 +1401,37 @@ footer .container .subscribe_input_wrapper input {
   .post .post-content{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .relatedPostSection .relatedPostBody .image .related-post-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    padding-top: 1.53rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 2.66rem;
+    height: 2.66rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 
   footer .container {
@@ -1269,6 +1517,45 @@ footer .container .subscribe_input_wrapper input {
     line-height: 1.25rem;
   }
 
+  .relatedPostSection .relatedPostBody .image .related-post-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .cat{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    /* padding-top: .92rem; */
+    padding-top: 2rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    text-align: left;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+  }
+
   footer .container {
     width: 20rem;
   }
@@ -1352,6 +1639,44 @@ footer .container .subscribe_input_wrapper input {
   .post .post-content{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .relatedPostSection .relatedPostBody .image .related-post-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .cat{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .title .title-anchor{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author {
+    padding-top: .67rem;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-pic{
+    display: none;
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title{
+    text-align: left;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .relatedPostSection .relatedPostBody .info .author .author-title:hover{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 
   footer .container {
@@ -1501,6 +1826,10 @@ footer .container .subscribe_input_wrapper input {
 @media (min-width: 1024px){
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:gap-16{
+    gap: 4rem;
   }
 }
 
