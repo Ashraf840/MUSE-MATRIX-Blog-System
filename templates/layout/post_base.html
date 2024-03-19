@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/272e010829.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link id="pagestyle" href="{% static 'css/output/post/postDetail.css' %}" rel="stylesheet" />
+
+    {% block css %} {% endblock %}
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-gray-200">
+        <div class="xl:container xl:mx-auto flex flex-col items-center text-center sm:flex-row sm:justify-between py-3">
+            <div
+                class="gf-nav-search-input-field-wrapper px-8 w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
+                <input type="text" class="gf-nav-search-input-field search-input-field" placeholder="Search..." />
+            </div>
+            <div class="shirnk w-11/12 sm:order-2 py-4">
+                <a href="{% url 'HomepageApplication' %}" class="gf-nav-title font-bold uppercase text-4xl">Muse Matrix</a>
+            </div>
+            <div class="gf-nav-socials w-96 order-3 flex justify-center">
+                <div class="flex gap-6">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mesage Notification -->
+    {% if messages %}
+    {% for msg in messages %}
+    <section id="newsSubBox" class="py-6">
+        <div class="container mx-auto px-20">
+            <div id="alert-3"
+                class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                role="alert">
+                <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div class="ms-3 text-sm font-medium">{{ msg }}</div>
+                <button type="button" id="newsSubBox_close_btn"
+                    class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
+                    data-dismiss-target="#alert-3" aria-label="Close">
+                    <span class="sr-only">Close</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% endif %}
+
+    <!-- Main Container Body -->
+    {% block content %} {% endblock %}
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-50">
+        <section class="bg-gray-50 mt-20">
+            <div class="container mx-auto md:px-20 py-16 text-center">
+                <h1 class="subscribe_newsletter">Subscribe Newsletter</h1>
+                <form action="{% url 'NewsletterApplication:subscription' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="subscribe_input_wrapper py-4">
+                        <input type="text" name="email"
+                            class="shadow border rounded w-96 px-3 py-3 text-gray-700 focus-outline-none focus:shadow-outline"
+                            placeholder="Enter Your Email" />
+                    </div>
+                    <button id="subscribe-btn"
+                        class="bg-orange-400 px-20 py-3 rounded-full text-gray-50 text-xl">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+        <div class="container mx-auto flex justify-center py-12">
+            <div class="py-5">
+                <div class="flex gap-6 justify-center">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <p class="copyright py-5 text-gray-400">Copyright @2024 All rights reserved | This tempalte is made by
+                    <b>nomadsde.com</b>
+                </p>
+                <p class="tc text-gray-400 text-center">Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Newsletter Subscription Popup Box -->
+    <script src="{% static 'js/newsletter_subscription_popup.js' %}"></script>
+
+    <!-- Custom JS Script -->
+    {% block js %} {% endblock %}
+</body>
+
+</html>

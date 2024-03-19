@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the 'poppins' fonts to all the components & their descendant components */
+body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+    padding: 0
+}
+
+*>* {
+    font-family: 'Poppins', sans-serif
+}
+
+.search-input-field {
+    @apply mt-1 bg-white block w-60 px-3 py-2 border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;
+    @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+}
+
+.container {
+    @apply mx-auto md:px-2 pb-16 w-1/2
+}
+
+.author .author-pic {
+    @apply h-20 w-20
+}
+
+.author .author-title {
+    @apply text-2xl font-medium text-gray-800 hover:text-gray-600
+}
+
+.author .author-designation {
+    @apply text-base text-gray-500
+}
+
+.post {
+    @apply py-10
+}
+
+.post .post-title {
+    @apply font-bold text-4xl text-center pb-5
+}
+
+.post .post-subtitle {
+    @apply text-gray-500 text-xl text-center
+}
+
+.post .post-image {
+    @apply py-10 flex justify-center
+}
+
+.post .post-content {
+    @apply text-gray-600 text-lg flex flex-col gap-4
+}
+
+.relatedPostSection .relatedPostBody .relatedPostBodyFlex {
+    @apply flex gap-0 lg:gap-5
+}
+
+.relatedPostSection .relatedPostTitle {
+    @apply font-medium text-2xl md:text-3xl xl:text-4xl py-10
+}
+
+.relatedPostSection .relatedPostBody .image .related-post-pic {
+    width: 23rem;
+    height: 14rem;
+}
+
+.relatedPostSection .relatedPostBody .info .cat {
+    @apply sm:text-xs xl:text-sm pb-2
+}
+
+.relatedPostSection .relatedPostBody .info .title .title-anchor {
+    @apply text-3xl font-medium
+}
+
+.relatedPostSection .relatedPostBody .info .author {
+    padding-top: 3.66rem;
+    padding-bottom: 0;
+    @apply flex
+}
+
+.relatedPostSection .relatedPostBody .info .author .authorFlex {
+    @apply flex flex-col justify-center px-0 sm:px-4
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-pic {
+    width: 4rem;
+    height: 4rem;
+}
+
+.relatedPostSection .relatedPostBody .info .author .author-title {
+    @apply text-xl font-medium text-gray-800 hover:text-gray-600
+}
+
+footer {
+    background-image: url('/assets/images/footer/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+footer .container {
+    width: 80rem;
+}
+
+footer .container .subscribe_newsletter {
+    @apply font-medium text-3xl
+}
+
+footer .container .subscribe_input_wrapper {
+    width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+    width: 57.3rem;
+}
+
+/* 2XL */
+@media only screen and (min-width: 1536px) {}
+
+/* xl */
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+    .author {
+        @apply py-7
+    }
+
+    .post {
+        @apply py-8
+    }
+
+    /* .relatedPostSection .relatedPostBody .info {
+        height: 14rem;
+    } */
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        width: 19.17rem;
+        height: 11.67rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 2.6rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 3.33rem;
+        height: 3.33rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-xl font-medium text-gray-800 hover:text-gray-600
+    }
+
+    footer .container {
+        width: 66.67rem;
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 47.75rem;
+    }
+}
+
+/* lg */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .author {
+        @apply py-6
+    }
+
+    .post {
+        @apply py-7
+    }
+
+    .author .author-pic {
+        @apply h-16 w-16
+    }
+
+    .author .author-title {
+        @apply text-xl
+    }
+
+    .post .post-title {
+        @apply font-bold text-4xl text-center pb-5
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        width: 15.34rem;
+        height: 9.34rem;
+        /* width: 16.34rem;
+        height: 10.9rem; */
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.4rem;
+        /* padding-top: 3rem; */
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-xl font-medium text-gray-800 hover:text-gray-600
+    }
+
+    footer .container {
+        width: 53.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 38.2rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-16
+    }
+}
+
+/* md */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .author {
+        @apply py-5
+    }
+
+    .post {
+        @apply py-6
+    }
+
+    .author .author-pic {
+        @apply h-14 w-14
+    }
+
+    .author .author-title {
+        @apply text-lg
+    }
+
+    .post .post-title {
+        @apply font-bold text-3xl text-center pb-5
+    }
+
+    .post .post-content {
+        @apply text-base
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.83rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-lg font-medium text-gray-800 hover:text-gray-600
+    }
+
+    footer .container {
+        width: 40.01rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl pt-12 pb-5
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 28.65rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-14 py-2
+    }
+}
+
+/* sm */
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .author {
+        @apply py-4
+    }
+
+    .post {
+        @apply py-5
+    }
+
+    .author .author-pic {
+        @apply h-12 w-12
+    }
+
+    .author .author-title {
+        @apply text-base
+    }
+
+    .post .post-title {
+        @apply font-medium text-2xl text-center pb-5
+    }
+
+    .post .post-subtitle {
+        @apply text-lg text-center
+    }
+
+    .post .post-content {
+        @apply text-base
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: 1.53rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        width: 2.66rem;
+        height: 2.66rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-lg font-medium text-gray-800 hover:text-gray-600
+    }
+
+    footer .container {
+        width: 33.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 23.875rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2
+    }
+}
+
+/* xs */
+@media only screen and (min-width: 384px) and (max-width: 639px) {
+    .container {
+        @apply py-4
+    }
+
+    .author {
+        @apply flex flex-col justify-center py-3
+    }
+
+    .author-pic-wrapper {
+        @apply flex justify-center py-5
+    }
+
+    .author .author-pic {
+        @apply h-10 w-10
+    }
+
+    .author .author-title {
+        @apply text-sm text-center
+    }
+
+    .author .author-designation {
+        @apply text-center
+    }
+
+    .post {
+        @apply py-4
+    }
+
+    .post .post-title {
+        @apply font-medium text-xl text-center pb-4
+    }
+
+    .post .post-subtitle {
+        @apply text-base text-center
+    }
+
+    .post .post-content {
+        @apply text-sm
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .cat {
+        @apply text-xs flex flex-col
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-xl
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        /* padding-top: .92rem; */
+        padding-top: 2rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-sm font-medium text-gray-800 hover:text-gray-600 text-left
+    }
+
+    footer .container {
+        width: 20rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 14.325rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2
+    }
+}
+
+/* 2xs */
+@media only screen and (min-width: 280px) and (max-width: 383px) {
+    .container {
+        @apply py-4
+    }
+
+    .author {
+        @apply flex flex-col justify-center py-3
+    }
+
+    .author-pic-wrapper {
+        @apply flex justify-center py-5
+    }
+
+    .author .author-pic {
+        @apply h-8 w-8
+    }
+
+    .author .author-title {
+        @apply text-sm text-center
+    }
+
+    .author .author-designation {
+        @apply text-xs text-center
+    }
+
+    .post {
+        @apply py-4
+    }
+
+    .post .post-title {
+        @apply font-medium text-xl text-center pb-3
+    }
+
+    .post .post-subtitle {
+        @apply text-sm text-center
+    }
+
+    .post .post-content {
+        @apply text-sm
+    }
+
+    .relatedPostSection .relatedPostBody .image .related-post-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .cat {
+        @apply text-xs flex flex-col
+    }
+
+    .relatedPostSection .relatedPostBody .info .title .title-anchor {
+        @apply text-lg
+    }
+
+    .relatedPostSection .relatedPostBody .info .author {
+        padding-top: .67rem;
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-pic {
+        @apply hidden
+    }
+
+    .relatedPostSection .relatedPostBody .info .author .author-title {
+        @apply text-sm font-medium text-gray-800 hover:text-gray-600 text-left
+    }
+
+    footer .container {
+        width: 14.58rem
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-lg
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 10.44rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-8 py-1
+    }
+
+    footer .container .copyright {
+        width: 12.5rem;
+        @apply text-sm
+    }
+
+    .gf-nav-title {
+        @apply text-2xl
+    }
+
+    .gf-nav-search-input-field-wrapper {
+        @apply px-6 w-60 py-3
+    }
+
+    .gf-nav-search-input-field {
+        @apply px-2 py-1 w-48 text-xs
+    }
+
+    .gf-nav-socials {
+        @apply w-32
+    }
+}

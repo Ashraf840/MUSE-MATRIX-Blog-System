@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends 'layout/post_base.html' %}
+{% load static %}
+
+
+<!-- Main Container Body -->
+{% block content %}
+
+<!-- Main post section -->
+<section class="container">
+    <div class="flex justify-center">
+        <!-- Author -->
+        <div class="author flex py-8">
+            <div class="author-pic-wrapper">
+                <img src="{{ post.author.profile_pic.url }}" alt="author-pic-1" class="author-pic rounded-full" />
+            </div>
+            <div class="author-title-wrapper flex flex-col justify-center px-4">
+                <a class="author-title">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                <span class="author-designation">{{ post.author.titles }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post -->
+    <div class="post">
+        <h1 class="post-title">
+            {{ post.title }}
+        </h1>
+        <p class="post-subtitle">{{ post.metaTitle }}</p>
+        <div class="post-image">
+            <img src="{{ post.feature_image.url }}" alt="blog-post-main-image" class="blog-post-main-image" />
+        </div>
+
+        <div class="post-content">
+            <p>{{ post.content }}</p>
+        </div>
+    </div>
+
+    <!-- Related Post -->
+    <section class="relatedPostSection pt-50">
+        <h1 class="relatedPostTitle">Related</h1>
+
+        <div id="relatedPostBody" class="relatedPostBody flex flex-col gap-20 lg:gap-16">
+            {% for rlpst in relatedPost %}
+            <div class="relatedPostBodyFlex">
+                <a href="{% url 'PostApplication:postDetail' rlpst.relatedPost.id rlpst.relatedPost.slug %}">
+                    <div class="image flex flex-col justify-start">
+                        <img src="{{ rlpst.relatedPost.feature_image.url }}" alt="related-post-pic"
+                            class="rounded related-post-pic" />
+                    </div>
+                </a>
+                <div class="info">
+                    <div class="cat">
+                        <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                        <a href="#" class="text-orange-800 hover:text-orange-600">- March 7, 2024</a>
+                    </div>
+                    <div class="title">
+                        <a href="{% url 'PostApplication:postDetail' rlpst.relatedPost.id rlpst.relatedPost.slug %}"
+                            class="title-anchor">{{ rlpst.relatedPost.title }}</a>
+                    </div>
+                    <div class="author">
+                        <img src="{{ rlpst.relatedPost.author.profile_pic.url }}" alt="author-pic-1"
+                            class="author-pic rounded-full" />
+                        <div class="authorFlex">
+                            <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                                {{ rlpst.relatedPost.author.first_name }} {{ rlpst.relatedPost.author.last_name }}
+                            </a>
+                            <span class="text-xs text-gray-500">{{ rlpst.relatedPost.author.titles }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</section>
+
+{% endblock %}

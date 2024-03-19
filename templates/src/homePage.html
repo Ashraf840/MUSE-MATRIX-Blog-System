@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/272e010829.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link id="pagestyle" href="{% static 'css/output/src/homepage.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-gray-200">
+        <div class="xl:container xl:mx-auto flex flex-col items-center text-center sm:flex-row sm:justify-between py-3">
+            <div
+                class="gf-nav-search-input-field-wrapper px-8 w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
+                <input type="text" class="gf-nav-search-input-field search-input-field" placeholder="Search..." />
+            </div>
+            <div class="shirnk w-12/12 sm:order-2 py-4">
+                <a href="{% url 'HomepageApplication' %}" class="gf-nav-title font-bold uppercase text-4xl">Muse
+                    Matrix</a>
+            </div>
+            <div class="gf-nav-socials w-96 order-3 flex justify-center">
+                <div class="flex gap-6">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mesage Notification -->
+    {% if messages %}
+    {% for msg in messages %}
+    <section id="newsSubBox" class="py-6">
+        <div class="container mx-auto px-20">
+            <div id="alert-3"
+                class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                role="alert">
+                <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div class="ms-3 text-sm font-medium">{{ msg }}</div>
+                <button type="button" id="newsSubBox_close_btn"
+                    class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"
+                    data-dismiss-target="#alert-3" aria-label="Close">
+                    <span class="sr-only">Close</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% endif %}
+
+    <!-- Hero Section -->
+    <section class="pb-16">
+        <div class="container mx-auto px-20 py-10">
+            <h1 class="font-medium text-4xl pb-12 text-center">Trending</h1>
+
+            <!-- Treanding Posts (Slider) -->
+            <div class="swiper trendingPostsSwiper">
+                <div class="swiper-wrapper">
+                    {% for pst in posts %}
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <a href="{% url 'PostApplication:postDetail' pst.id pst.slug %}">
+                                <div class="hero-container-image-wrapper">
+                                    <img src="{{ pst.feature_image.url }}" alt="hero-trending-pic"
+                                        class="hero-container-image" />
+                                </div>
+                            </a>
+                            <div class="info">
+                                <!-- Category; Published Date -->
+                                <div class="cat gf-post-xxs-text">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">- {{ pst.created_at }}</a>
+                                </div>
+                                <!-- Title -->
+                                <div class="title">
+                                    {% comment %} <a href="#" class="gf-post-title title-anchor">{{ pst.title }}</a>
+                                    <small>{{ pst.id }}</small> {% endcomment %}
+                                    <a href="{% url 'PostApplication:postDetail' pst.id pst.slug %}"
+                                        class="gf-post-title title-anchor">{{ pst.title }}</a>
+                                </div>
+                                <!-- Subtitle -->
+                                <p class="gf-post-subtitle subtitle py-3">
+                                    {{ pst.metaTitle }}
+                                </p>
+                                <!-- Author -->
+                                <div class="author flex py-5">
+                                    <img src="{{ pst.author.profile_pic.url }}" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                                            {{ pst.author.first_name }} {{ pst.author.last_name }}
+                                        </a>
+                                        <span class="text-xs text-gray-500">{{ pst.author.titles }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section class="container mx-auto px-20 py-10">
+        <h1 class="font-medium text-4xl py-12 text-center">Latest Posts</h1>
+
+        <!-- Grid Columns -->
+        <div id="latest-posts" class="grid md:grid-cols-2 xl:grid-cols-3 gap-20">
+            <!-- Item-1 -->
+            {% for lpst in latestPosts %}
+            <div class="item">
+                <a href="{% url 'PostApplication:postDetail' lpst.post.id lpst.post.slug %}">
+                    <div class="images flex justify-center">
+                        <img src="{{ lpst.post.feature_image.url }}" alt="latest-post-pic"
+                            class="rounded latest-post-pic" />
+                    </div>
+                </a>
+                <div class="post-cat post-cat-xxs-text text-sm flex justify-start flex-row py-2">
+                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                    <a href="#" class="text-orange-800 hover:text-orange-600">- {{ lpst.post.created_at }}</a>
+                </div>
+                <div class="title flex justify-start">
+                    <a href="{% url 'PostApplication:postDetail' lpst.post.id lpst.post.slug %}"
+                        class="text-2xl font-medium text-gray-800 hover:text-gray-600">{{ lpst.post.title }}</a>
+                </div>
+                <p class="subtitle text-gray-500 flex justify-start py-3">
+                    {{ lpst.post.metaTitle }}
+                </p>
+                <div class="author flex justify-start pt-1 pb-3 md:py-5">
+                    <img src="{{ lpst.post.author.profile_pic.url }}" alt="author-pic-1"
+                        class="author-pic rounded-full" />
+                    <div class="flex flex-col justify-center px-4">
+                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                            {{ lpst.post.author.first_name }} {{ lpst.post.author.last_name }}
+                        </a>
+                        <span class="text-xs text-gray-500">{{ lpst.post.author.titles }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Most Popular Posts (Slider) -->
+    <section class="py-10">
+        <div class="container mx-auto px-20 py-10">
+            <h1 class="font-medium text-4xl pb-12 text-center">Most Popular</h1>
+
+            <!-- Popular Posts Slider -->
+            <div class="swiper popularPostsSwiper">
+                <div id="popular-posts-wrapper" class="swiper-wrapper">
+                    {% for mppst in mostPopularPosts %}
+                    <div class="swiper-slide">
+                        <div class="popularPostsMedia">
+                            <a href="{% url 'PostApplication:postDetail' mppst.post.id mppst.post.slug %}">
+                                <div class="image">
+                                    <img src="{{ mppst.post.feature_image.url }}" alt="popular-post-pic"
+                                        class="rounded popular-post-pic" />
+                                </div>
+                            </a>
+                            <div class="cat popular-post-cat-xxs-text">
+                                <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                <a href="#" class="text-orange-800 hover:text-orange-600">
+                                    - {{ mppst.post.created_at }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popularPostsInfo">
+                            <div class="title">
+                                <a href="{% url 'PostApplication:postDetail' mppst.post.id mppst.post.slug %}"
+                                    class="font-medium text-gray-800 hover:text-gray-600">
+                                    {{ mppst.post.title }}
+                                </a>
+                            </div>
+                            <p class="subtitle">
+                                {{ mppst.post.metaTitle }}
+                            </p>
+                            <div class="author flex justify-start pt-3 pb-1">
+                                <img src="{{ mppst.post.author.profile_pic.url }}" alt="author-pic-1"
+                                    class="author-pic rounded-full" />
+                                <div class="flex flex-col justify-center px-4">
+                                    <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                                        {{ mppst.post.author.first_name }} {{ mppst.post.author.last_name }}
+                                    </a>
+                                    <span class="text-xs text-gray-500">{{ mppst.post.author.titles }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </section>
+
+    <!-- Categorized Posts -->
+    <section class="py-10">
+        <div class="container mx-auto px-20 py-10">
+            <div class="grid lg:grid-cols-2">
+                <!-- Category: Business -->
+                <div class="item categorizedPostItem">
+                    <h1 class="font-medium text-4xl py-12">Business</h1>
+                    <div id="categorized-business-posts-wrapper"
+                        class="flex flex-col gap-10 categorizedBusinessPostsWrapper">
+                        {% for bpst in businessPosts %}
+                        <div class="flex gap-5 categorizedBusinessPostsItem">
+                            <a href="{% url 'PostApplication:postDetail' bpst.id bpst.slug  %}">
+                                <div class="image flex flex-col justify-start">
+                                    <img src="{{ bpst.feature_image.url }}" alt="categorized-post-pic"
+                                        class="rounded categorized-post-pic" />
+                                </div>
+                            </a>
+                            <div class="info flex flex-col justify-center">
+                                <div class="cat">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">
+                                        {{ bpst.created_at }}
+                                    </a>
+                                </div>
+                                <div class="title">
+                                    <a href="{% url 'PostApplication:postDetail' bpst.id bpst.slug  %}"
+                                        class="title-anchor">{{ bpst.title }}</a>
+                                </div>
+                                <div class="author flex">
+                                    <img src="{{ bpst.author.profile_pic.url }}" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                                            {{ bpst.author.first_name }} {{ bpst.author.last_name }}
+                                        </a>
+                                        <span class="text-xs text-gray-500">{{ bpst.author.titles }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Category: Travel -->
+                <div class="item categorizedPostItem">
+                    <h1 class="font-medium text-4xl py-12">Travel</h1>
+                    <div id="categorized-travel-posts-wrapper"
+                        class="flex flex-col gap-10 categorizedTravelPostsWrapper">
+                        {% for tpst in travelPosts %}
+                        <div class="flex gap-5 categorizedTravelPostsItem">
+                            <a href="{% url 'PostApplication:postDetail' tpst.id tpst.slug  %}">
+                                <div class="image flex flex-col justify-start">
+                                    <img src="{{ tpst.feature_image.url }}" alt="categorized-post-pic"
+                                        class="rounded categorized-post-pic" />
+                                </div>
+                            </a>
+                            <div class="info flex flex-col justify-center">
+                                <div class="cat">
+                                    <a href="#" class="text-orange-600 hover:text-orange-800">Business, Travel</a>
+                                    <a href="#" class="text-orange-800 hover:text-orange-600">
+                                        {{ tpst.created_at }}
+                                    </a>
+                                </div>
+                                <div class="title">
+                                    <a href="{% url 'PostApplication:postDetail' tpst.id tpst.slug  %}"
+                                        class="title-anchor">{{ tpst.title }}</a>
+                                </div>
+                                <div class="author flex py-5">
+                                    <img src="{{ tpst.author.profile_pic.url }}" alt="author-pic-1"
+                                        class="author-pic rounded-full" />
+                                    <div class="flex flex-col justify-center px-4">
+                                        <a class="author-title text-md font-medium text-gray-800 hover:text-gray-600">
+                                            {{ tpst.author.first_name }} {{ tpst.author.last_name }}
+                                        </a>
+                                        <span class="text-xs text-gray-500">{{ tpst.author.titles }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-50">
+        <section class="bg-gray-50 mt-20">
+            <div class="container mx-auto md:px-20 py-16 text-center">
+                <h1 class="subscribe_newsletter">Subscribe Newsletter</h1>
+                <form action="{% url 'NewsletterApplication:subscription' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="subscribe_input_wrapper py-4">
+                        <input type="text" name="email"
+                            class="shadow border rounded w-96 px-3 py-3 text-gray-700 focus-outline-none focus:shadow-outline"
+                            placeholder="Enter Your Email" />
+                    </div>
+                    <button id="subscribe-btn" class="bg-orange-400 px-20 py-3 rounded-full text-gray-50 text-xl">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+        <div class="container mx-auto flex justify-center py-12">
+            <div class="py-5">
+                <div class="flex gap-6 justify-center">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <p class="copyright py-5 text-gray-400">Copyright @2024 All rights reserved | This tempalte is made by
+                    <b>nomadsde.com</b>
+                </p>
+                <p class="tc text-gray-400 text-center">Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Newsletter Subscription Popup Box -->
+    <script src="{% static 'js/newsletter_subscription_popup.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // ----------------- Hero Section -----------------
+        // Initialize Swiper (Hero Section)
+        var trendingPostsSwiper = new Swiper('.trendingPostsSwiper', {
+            loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Initialize Swiper (Most Popular Post Section)
+        var popularPostsSwiper = new Swiper('.popularPostsSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Dynamically change the slidesPerView based on window screen size
+        window.addEventListener('resize', function () {
+            // Get the current window width
+            var windowWidth = window.innerWidth;
+
+            // Set different slidesPerView based on the window width
+            // if (windowWidth < 768) {
+            if (windowWidth < 1024) {
+                popularPostsSwiper.params.slidesPerView = 1; // Change to 1 slide per view
+                // popularPostsSwiper.params.width = 40;
+            } else {
+                popularPostsSwiper.params.slidesPerView = 2; // Reset to the initial value (3 slides per view)
+            }
+
+            // Update popularPostsSwiper
+            popularPostsSwiper.update();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "backend_dj_tailwind_17030224",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind_homepage": "npx tailwindcss -i ./static/css/input/src/homepage.css -o ./static/css/output/src/homepage.css --watch",
+    "tailwind_postDetail": "npx tailwindcss -i ./static/css/input/post/postDetail.css -o ./static/css/output/post/postDetail.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashraf840/MUSE-MATRIX-Blog-System.git"
+  },
+  "author": "Kh Tanjim Ashraf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ashraf840/MUSE-MATRIX-Blog-System/issues"
+  },
+  "homepage": "https://github.com/Ashraf840/MUSE-MATRIX-Blog-System#readme"
+}

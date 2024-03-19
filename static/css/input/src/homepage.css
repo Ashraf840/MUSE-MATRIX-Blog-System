@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the 'poppins' fonts to all the components & their descendant components */
+body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+    padding: 0
+}
+
+*>* {
+    font-family: 'Poppins', sans-serif
+}
+
+.search-input-field {
+    @apply mt-1 bg-white block w-60 px-3 py-2 border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;
+    @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+}
+
+.hero-container-grid {
+    @apply grid grid-cols-2
+}
+
+.hero-container-image-wrapper {
+    @apply block lg:inline-block
+}
+
+.hero-container-image {
+    height: 40rem;
+}
+
+.info {
+    @apply block lg:inline-block
+}
+
+.info .cat {
+    @apply sm:text-xs xl:text-sm pb-2
+}
+
+.info .title-anchor {
+    @apply font-medium text-gray-800 hover:text-gray-600
+}
+
+#latest-posts .item .subtitle {
+    @apply text-sm lg:text-base
+}
+
+.author .author-pic {
+    @apply h-10 w-10
+}
+
+/* Swiper Slider */
+.swiper {
+    height: 40rem;
+    width: 86rem;
+}
+
+.swiper-slide {
+    /* font-size: 18px; */
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    /* height: 40rem; */
+    object-fit: cover;
+}
+
+/* Latest Posts */
+/* #latest-posts .item {
+    @apply bg-teal-400
+} */
+
+#latest-posts .item .latest-post-pic {
+    width: 27rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+#latest-posts .item .post-cat {
+    @apply text-sm flex flex-row justify-start
+}
+
+/* Most Popular Posts */
+.popularPostsSwiper #popular-posts-wrapper .swiper-slide {
+    @apply block
+}
+
+.popularPostsSwiper .popularPostsMedia .cat {
+    /* @apply sm:text-xs xl:text-sm; */
+    @apply py-4
+}
+
+.popularPostsSwiper .popularPostsMedia .popular-post-pic {
+    width: 100%;
+    height: 20rem
+}
+
+.popularPostsSwiper .popularPostsInfo .title {
+    @apply text-3xl md:text-4xl
+}
+
+.popularPostsSwiper .popularPostsInfo .subtitle {
+    @apply text-xs lg:text-base py-3 text-gray-500
+}
+
+/* Categorized Posts (Business, Travel) */
+.categorizedPostItem .image .categorized-post-pic,
+.categorizedPostItem .image .categorized-post-pic {
+    width: 20rem;
+    height: 10rem;
+}
+
+.categorizedPostItem .info,
+.categorizedPostItem .info {
+    @apply p-0
+}
+
+.categorizedPostItem .info .cat {
+    @apply sm:text-xs xl:text-sm pb-2
+}
+
+/* .categorizedPostItem .categorizedBusinessPostsWrapper .categorizedBusinessPostsItem {
+    @apply py-1
+} */
+
+.categorizedPostItem .info .title .title-anchor,
+.categorizedPostItem .info .title .title-anchor {
+    @apply text-xl
+}
+
+.categorizedPostItem .info .author {
+    @apply py-9
+}
+
+.categorizedPostItem .info .author .author-pic {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+footer {
+    background-image: url('/assets/images/footer/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+footer .container {
+    width: 80rem;
+}
+
+footer .container .subscribe_newsletter {
+    @apply font-medium text-3xl
+}
+
+footer .container .subscribe_input_wrapper {
+    width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+    width: 57.3rem;
+}
+
+/* 2XL */
+@media only screen and (min-width: 1536px) {
+    .swiper {
+        width: 100%
+    }
+
+    .info {
+        @apply px-10 py-5
+    }
+
+    .info .title-anchor {
+        @apply text-6xl
+    }
+
+    .info .subtitle {
+        @apply text-base
+    }
+
+    .author .author-pic {
+        @apply h-12 w-12
+    }
+
+    .popularPostsSwiper {
+        height: 43rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-sm
+    }
+}
+
+/* xl */
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+    .swiper {
+        width: 100%
+    }
+
+    .info {
+        @apply px-10 py-5
+    }
+
+    .info .title-anchor {
+        @apply text-6xl
+    }
+
+    .info .subtitle {
+        @apply text-base
+    }
+
+    .info .author .author-pic {
+        @apply h-12 w-12
+    }
+
+    .popularPostsSwiper {
+        height: 43rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-sm
+    }
+
+    footer .container {
+        width: 66.67rem;
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 47.75rem;
+    }
+}
+
+/* lg */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .swiper {
+        width: 100%
+    }
+
+    .info {
+        @apply px-10 py-5
+    }
+
+    .info .title-anchor {
+        @apply text-5xl
+    }
+
+    .info .subtitle {
+        @apply text-base
+    }
+
+    .info .author .author-pic {
+        @apply h-12 w-12
+    }
+
+    .popularPostsSwiper {
+        height: 46rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
+    }
+
+    .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+        width: 30rem;
+        height: 12rem;
+    }
+
+    .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor {
+        @apply text-lg
+    }
+
+    .categorizedPostItem .info .author {
+        @apply py-4
+    }
+
+    .categorizedPostItem .info .author .author-pic {
+        @apply h-8 w-8
+    }
+
+    footer .container {
+        width: 53.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 38.2rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-16
+    }
+}
+
+/* md */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        @apply px-10 py-0
+    }
+
+    .swiper {
+        width: 100%;
+        height: 10%;
+        margin: 0 auto
+    }
+
+    .swiper-wrapper {
+        height: 10%
+    }
+
+    .swiper .swiper-slide-active {
+        width: 43.063rem !important;
+    }
+
+    .info {
+        @apply px-10 py-5
+    }
+
+    .info .title-anchor {
+        @apply text-5xl
+    }
+
+    .info .subtitle {
+        @apply text-sm
+    }
+
+    /* #latest-posts .item .subtitle {
+        @apply text-sm
+    } */
+
+    .popularPostsSwiper {
+        height: 46rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .popular-post-pic {
+        /* height: 70rem; */
+        height: 30rem;
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-sm
+    }
+
+    .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+        width: 30rem;
+        height: 13rem;
+    }
+
+    .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor {
+        @apply text-3xl
+    }
+
+    footer .container {
+        width: 40.01rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl pt-12 pb-5
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 28.65rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-14 py-2
+    }
+}
+
+/* sm */
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .swiper {
+        width: 100%;
+        height: 10%
+    }
+
+    .swiper-wrapper {
+        height: 10%
+    }
+
+    .info {
+        @apply px-0 py-5
+    }
+
+    .info .title-anchor {
+        @apply text-3xl
+    }
+
+    .info .subtitle {
+        @apply text-sm
+    }
+
+    #latest-posts .item {
+        /* padding: 0 6.5rem; */
+        padding: 0 0rem;
+        margin: 0;
+    }
+
+    /* .latest-posts .item {
+        @apply bg-orange-200
+    } */
+
+    #latest-posts .item .latest-post-pic {
+        width: 30rem;
+    }
+
+    #latest-posts .item .post-cat {
+        padding: .7rem 0;
+        @apply text-xs
+    }
+
+    /* #latest-posts .item .subtitle {
+        @apply text-sm
+    } */
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
+    }
+
+    .categorizedPostItem .info .author {
+        @apply py-4
+    }
+
+    .categorizedPostItem .info .author .author-pic {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .categorizedPostItem .info .author .author-title {
+        @apply text-sm
+    }
+
+    .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+        width: 40rem;
+        height: 14rem;
+    }
+
+    .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .categorizedPostItem .info .author {
+        @apply py-10
+    }
+
+    footer .container {
+        width: 33.34rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-2xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 23.875rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2
+    }
+}
+
+/* xs */
+@media only screen and (min-width: 384px) and (max-width: 639px) {
+    .container {
+        @apply px-10
+    }
+
+    .swiper {
+        width: 100%;
+        height: 10%
+    }
+
+    .swiper-wrapper {
+        height: 10%
+    }
+
+    .hero-container-image-wrapper {
+        @apply hidden
+    }
+
+    .info {
+        /* @apply px-10 py-5 */
+        @apply px-0 py-5
+    }
+
+    .info .cat {
+        @apply text-xs flex flex-col py-4
+    }
+
+    .info .title-anchor {
+        @apply text-3xl
+    }
+
+    .info .subtitle {
+        @apply text-sm
+    }
+
+    .swiper .info .author .author-title {
+        @apply text-base
+    }
+
+    #latest-posts .item {
+        /* padding: 0 2.5rem; */
+        padding: 0;
+    }
+
+    #latest-posts .item .latest-post-pic {
+        width: 34rem;
+    }
+
+    #latest-posts .item .post-cat {
+        @apply text-xs flex flex-col
+    }
+
+    .popularPostsSwiper .popularPostsMedia .cat {
+        @apply text-xs
+    }
+
+    .categorizedPostItem .info,
+    .categorizedPostItem .info {
+        @apply p-0
+    }
+
+    .categorizedPostItem .categorizedBusinessPostsItem,
+    .categorizedPostItem .categorizedTravelPostsItem {
+        @apply gap-0
+    }
+
+    .categorizedPostItem .info .cat {
+        font-size: 0.675rem;
+        @apply py-0
+    }
+
+    .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+        /* width: 40rem;
+        height: 14rem; */
+        @apply hidden
+    }
+
+    .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .categorizedPostItem .info .author {
+        @apply py-8
+    }
+
+    .categorizedPostItem .info .author .author-pic {
+        @apply h-8 w-8
+    }
+
+    .categorizedPostItem .info .author .author-title {
+        @apply text-sm
+    }
+
+    footer .container {
+        width: 20rem;
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-xl
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 14.325rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-12 py-2
+    }
+}
+
+/* 2xs */
+@media only screen and (min-width: 280px) and (max-width: 383px) {
+    .container {
+        @apply px-6
+    }
+
+    .swiper {
+        width: 100%;
+        height: 10%
+    }
+
+    .swiper-wrapper {
+        height: 10%
+    }
+
+    .hero-container-image-wrapper {
+        @apply hidden
+    }
+
+    .info {
+        @apply px-4 py-5 block
+    }
+
+    .swiper .info .author .author-title {
+        @apply text-sm
+    }
+
+    #latest-posts .item {
+        padding: 0 1rem;
+    }
+
+    /* #latest-posts .item .subtitle {
+        @apply text-sm
+    } */
+
+    #latest-posts .item .post-cat-xxs-text {
+        font-size: 0.675rem;
+        @apply flex flex-col
+    }
+
+    #latest-posts .item .author .author-title {
+        @apply text-sm
+    }
+
+    .popularPostsSwiper .popularPostsMedia .popular-post-cat-xxs-text {
+        font-size: 0.675rem;
+        @apply flex flex-col
+    }
+
+    .categorizedPostItem .categorizedBusinessPostsItem,
+    .categorizedPostItem .categorizedTravelPostsItem {
+        @apply gap-0
+    }
+
+    .categorizedPostItem .info .cat {
+        font-size: 0.675rem;
+        @apply py-0
+    }
+
+    .categorizedPostItem .image .categorized-post-pic,
+    .categorizedPostItem .image .categorized-post-pic {
+        @apply hidden
+    }
+
+    .categorizedPostItem .info .title .title-anchor,
+    .categorizedPostItem .info .title .title-anchor {
+        @apply text-2xl
+    }
+
+    .categorizedPostItem .info .author {
+        @apply py-8
+    }
+
+    .categorizedPostItem .info .author .author-pic {
+        @apply h-8 w-8
+    }
+
+    .categorizedPostItem .info .author .author-title {
+        @apply text-sm
+    }
+
+    footer .container {
+        width: 14.58rem
+    }
+
+    footer .container .subscribe_newsletter {
+        @apply text-lg
+    }
+
+    footer .container .subscribe_input_wrapper input {
+        width: 10.44rem;
+    }
+
+    footer #subscribe-btn {
+        @apply px-8 py-1
+    }
+
+    footer .container .copyright {
+        width: 12.5rem;
+        @apply text-sm
+    }
+
+    /* Add your Galaxy Fold specific styles here */
+    .gf-nav-title {
+        @apply text-2xl
+    }
+
+    .gf-nav-search-input-field-wrapper {
+        @apply px-6 w-60 py-3
+    }
+
+    .gf-nav-search-input-field {
+        @apply px-2 py-1 w-48 text-xs
+    }
+
+    .gf-post-info {
+        @apply px-14
+    }
+
+    .gf-post-title {
+        @apply text-lg
+    }
+
+    .gf-nav-socials {
+        @apply w-32
+    }
+
+    .gf-post-subtitle {
+        @apply text-xs
+    }
+
+    .gf-post-xxs-text {
+        font-size: 0.675rem;
+        @apply flex flex-col
+    }
+}
