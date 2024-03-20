@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-{% extends 'layout/post_base.html' %}
+{% extends 'layout/base.html' %}
 {% load static %}
 
+{% block css %}
+<link id="pagestyle" href="{% static 'css/output/post/postDetail.css' %}" rel="stylesheet" />
+{% endblock %}
 
 <!-- Main Container Body -->
 {% block content %}

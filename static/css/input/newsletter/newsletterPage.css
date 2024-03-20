@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the 'poppins' fonts to all the components & their descendant components */
+body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+    padding: 0
+}
+
+*>* {
+    font-family: 'Poppins', sans-serif
+}
+
+.search-input-field {
+    @apply mt-1 bg-white block w-60 px-3 py-2 border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;
+    @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+}
+
+.container {
+    @apply mx-auto md:px-2 pb-16 w-1/2
+}
+
+.newsletter .newsletter-title {
+    @apply font-bold text-4xl text-center py-8
+}
+
+.newsletter .newsletter-list-body {
+    width: 40rem;
+}
+
+footer {
+    background-image: url('/assets/images/footer/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+footer .container {
+    width: 80rem;
+}
+
+footer .container .subscribe_newsletter {
+    @apply font-medium text-3xl
+}
+
+footer .container .subscribe_input_wrapper {
+    width: 100%;
+}
+
+footer .container .subscribe_input_wrapper input {
+    width: 57.3rem;
+}

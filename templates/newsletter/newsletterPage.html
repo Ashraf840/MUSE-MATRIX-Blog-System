@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/272e010829.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link id="pagestyle" href="{% static 'css/output/newsletter/newsletterPage.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="flex flex-col h-screen justify-between">
+        <!-- HEADER -->
+        <header class="bg-gray-200">
+            <div
+                class="xl:container xl:mx-auto flex flex-col items-center text-center sm:flex-row sm:justify-between py-3">
+                <div
+                    class="gf-nav-search-input-field-wrapper px-8 w-96 order-2 sm:order-1 flex justify-center py-4 sm:py-0">
+                    <input type="text" class="gf-nav-search-input-field search-input-field" placeholder="Search..." />
+                </div>
+                <div class="shirnk w-11/12 sm:order-2 py-4">
+                    <a href="{% url 'HomepageApplication' %}" class="gf-nav-title font-bold uppercase text-4xl">Muse
+                        Matrix</a>
+                </div>
+                <div class="gf-nav-socials w-96 order-3 flex justify-center">
+                    <div class="flex gap-6">
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="mb-auto">
+            <section class="container">
+                <div class="flex justify-center">
+
+                    <!-- Post -->
+                    <div class="newsletter">
+                        <h1 class="newsletter-title">
+                            Newsletter
+                        </h1>
+
+                        <div class="newsletter-list-body">
+
+                            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <thead class="text-xs text-gray-700 uppercase bg-gray-300">
+                                        <tr>
+                                            <!-- <th scope="col" class="p-4">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-all-search" type="checkbox"
+                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                                </div>
+                                            </th> -->
+                                            <th colspan="2" scope="col" class="text-center px-6 py-3 bg-teal-200">
+                                                <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 
+                                                    focus:outline-none bg-white rounded-lg border border-gray-200 
+                                                    hover:bg-gray-100 hover:text-gray-900 focus:z-10 
+                                                    focus:ring-4 focus:ring-gray-100">
+                                                    Send Email
+                                                </button>
+                                            </th>
+                                            <!-- <th scope="col" class="ps-28 pe-6 py-3">
+                                                Action
+                                            </th> -->
+                                        </tr>
+                                    </thead>
+                                    <thead class="text-xs text-gray-700 uppercase bg-gray-300">
+                                        <tr>
+                                            <th scope="col" class="p-4">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-all-search" type="checkbox"
+                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                                </div>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Email
+                                            </th>
+                                            <!-- <th scope="col" class="ps-28 pe-6 py-3">
+                                                Action
+                                            </th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for s_email in subscribed_emails %}
+                                        <!-- 1st -->
+                                        <tr class="bg-white border-b hover:bg-gray-50">
+                                            <td class="w-4 p-4">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-table-search-1" type="checkbox"
+                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                    <label for="checkbox-table-search-1"
+                                                        class="sr-only">checkbox</label>
+                                                </div>
+                                            </td>
+                                            <th scope="row" colspan="2"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                {{ s_email.email }}
+                                            </th>
+                                            <!-- <td class="flex items-center ps-28 pe-6 py-4">
+                                                <button type="button"
+                                                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100">
+                                                    Send Email
+                                                </button>
+                                            </td> -->
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-50">
+            <section class="bg-gray-50 mt-5">
+                <div class="container mx-auto md:px-20 py-16 text-center">
+                    <!-- Empty Sapce -->
+                </div>
+            </section>
+            <div class="container mx-auto flex justify-center py-12">
+                <div class="py-5">
+                    <div class="flex gap-6 justify-center">
+                        <a><i class="fa-brands fa-facebook"></i></a>
+                        <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <p class="copyright py-5 text-gray-400">Copyright @2024 All rights reserved | This tempalte is made
+                        by
+                        <b>nomadsde.com</b>
+                    </p>
+                    <p class="tc text-gray-400 text-center">Terms & Conditions</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Newsletter Subscription Popup Box -->
+    <script src="{% static 'js/newsletter_subscription_popup.js' %}"></script>
+
+    <!-- Custom JS Script -->
+    {% block js %} {% endblock %}
+</body>
+
+</html>

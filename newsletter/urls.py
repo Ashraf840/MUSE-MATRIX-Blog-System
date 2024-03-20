@@ -4,5 +4,6 @@ from . import views
 app_name = 'newsletterApp'
 
 urlpatterns = [
+    path('', views.NewsletterPage.as_view(), name='NewsletterPage'),
     path('subscription/', views.newsletterSubscription.as_view(), name='subscription'),
 ]

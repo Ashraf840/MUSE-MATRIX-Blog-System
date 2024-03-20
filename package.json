@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "tailwind_homepage": "npx tailwindcss -i ./static/css/input/src/homepage.css -o ./static/css/output/src/homepage.css --watch",
-    "tailwind_postDetail": "npx tailwindcss -i ./static/css/input/post/postDetail.css -o ./static/css/output/post/postDetail.css --watch"
+    "tailwind_postDetail": "npx tailwindcss -i ./static/css/input/post/postDetail.css -o ./static/css/output/post/postDetail.css --watch",
+    "tailwind_newsletter_homepage": "npx tailwindcss -i ./static/css/input/newsletter/newsletterPage.css -o ./static/css/output/newsletter/newsletterPage.css --watch"
   },
   "repository": {
     "type": "git",
