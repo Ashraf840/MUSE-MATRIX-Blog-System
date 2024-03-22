@@ -68,26 +68,16 @@
                                                     <label for="checkbox-all-search" class="sr-only">checkbox</label>
                                                 </div>
                                             </th> -->
-                                            <<<<<<< HEAD <th colspan="2" scope="col"
-                                                class="text-center px-6 py-3 bg-teal-200">
-                                                <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 
-                                                    focus:outline-none bg-white rounded-lg border border-gray-200 
-                                                    hover:bg-gray-100 hover:text-gray-900 focus:z-10 
-                                                    focus:ring-4 focus:ring-gray-100">
-                                                    Send Email
-                                                    =======
-                                                    <th colspan="3" scope="col"
-                                                        class="text-center px-6 py-3 bg-teal-200">
-                                                        <button type="button" class="open-modal-btn py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 
+                                            <th colspan="3" scope="col" class="text-center px-6 py-3 bg-teal-200">
+                                                <button type="button" class="open-modal-btn py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 
                                                     focus:outline-none bg-white rounded-lg border border-gray-200 
                                                     hover:bg-gray-100 hover:text-gray-900 focus:z-10 
                                                     focus:ring-4 focus:ring-gray-100"
-                                                            onclick="openModal('{{ s_email.id }}')">
-                                                            Send Email to Selected
-                                                            >>>>>>> c262ea4 (Created UI of newsletter email list page)
-                                                        </button>
-                                                    </th>
-                                                    <!-- <th scope="col" class="ps-28 pe-6 py-3">
+                                                    onclick="openModal('{{ s_email.id }}')">
+                                                    Send Email to Selected
+                                                </button>
+                                            </th>
+                                            <!-- <th scope="col" class="ps-28 pe-6 py-3">
                                                 Action
                                             </th> -->
                                         </tr>
@@ -104,14 +94,9 @@
                                             <th scope="col" class="px-6 py-3">
                                                 Email
                                             </th>
-                                            <<<<<<< HEAD <!-- <th scope="col" class="ps-28 pe-6 py-3">
+                                            <th scope="col" class="ps-28 pe-6 py-3">
                                                 Action
-                                                </th> -->
-                                                =======
-                                                <th scope="col" class="ps-28 pe-6 py-3">
-                                                    Action
-                                                </th>
-                                                >>>>>>> c262ea4 (Created UI of newsletter email list page)
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -120,46 +105,31 @@
                                         <tr class="bg-white border-b hover:bg-gray-50">
                                             <td class="w-4 p-4">
                                                 <div class="flex items-center">
-                                                    <<<<<<< HEAD <input id="checkbox-table-search-1" type="checkbox"
+                                                    <input id="checkbox-{{ s_email.id }}" type="checkbox"
+                                                        onchange="appendEmailChecklist(event, '{{ s_email.email }}')"
                                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                        <label for="checkbox-table-search-1"
-                                                            class="sr-only">checkbox</label>
                                                 </div>
                                             </td>
-                                            <th scope="row" colspan="2"
+                                            <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                                 {{ s_email.email }}
                                             </th>
-                                            <!-- <td class="flex items-center ps-28 pe-6 py-4">
-                                                <button type="button"
-                                                    class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100">
-                                                    Send Email
+                                            <td class="flex items-center ps-28 pe-6 py-4">
+                                                <button type="button" id="open-modal-btn"
+                                                    onclick="openModal('{{ s_email.id }}')"
+                                                    class="open-modal-btn-{{s_email.id}} py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100">
+                                                    Send Email {{ s_email.id }}
                                                 </button>
-                                            </td> -->
-                                            =======
-                                            <input id="checkbox-{{ s_email.id }}" type="checkbox"
-                                                onchange="appendEmailChecklist(event, '{{ s_email.email }}')"
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
                             </div>
-                            </td>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                {{ s_email.email }}
-                            </th>
-                            <td class="flex items-center ps-28 pe-6 py-4">
-                                <button type="button" id="open-modal-btn" onclick="openModal('{{ s_email.id }}')"
-                                    class="open-modal-btn-{{s_email.id}} py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100">
-                                    Send Email {{ s_email.id }}
-                                </button>
-                            </td>
-                            >>>>>>> c262ea4 (Created UI of newsletter email list page)
-                            </tr>
-                            {% endfor %}
-                            </tbody>
-                            </table>
+
                         </div>
 
-                    </div>
-                    <<<<<<< HEAD=======<!-- Newsletter Email Modal -->
+                        <!-- Newsletter Email Modal -->
                         <!-- class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 bottom-0 left-0 flex items-center justify-center z-50"> -->
                         <div id="newsletter-email-modal" tabindex="-1" aria-hidden="true"
                             class="newsletter-email-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 bottom-0 left-0 z-50">
@@ -225,8 +195,7 @@
 
                         <!-- Additionally, I removed some unnecessary max-height and max-width properties, which were causing potential issues with centering. You might need to adjust the width and padding of the modal (`max-w-md` and `p-4` respectively) according to your design requirements. -->
 
-                        >>>>>>> c262ea4 (Created UI of newsletter email list page)
-                </div>
+                    </div>
 
             </section>
         </main>
@@ -255,15 +224,8 @@
         </footer>
     </div>
 
-    <<<<<<< HEAD <!-- Newsletter Subscription Popup Box -->
-        <script src="{% static 'js/newsletter_subscription_popup.js' %}"></script>
-
-        <!-- Custom JS Script -->
-        {% block js %} {% endblock %}
-        =======
-        <!-- Custom JS Script -->
-        <script src="{% static 'js/newsletter/email-modal-toggle.js' %}"></script>
-        >>>>>>> c262ea4 (Created UI of newsletter email list page)
+    <!-- Custom JS Script -->
+    <script src="{% static 'js/newsletter/email-modal-toggle.js' %}"></script>
 </body>
 
 </html>
