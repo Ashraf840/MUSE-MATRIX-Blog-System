@@ -106,7 +106,7 @@
                                             <td class="w-4 p-4">
                                                 <div class="flex items-center">
                                                     <input id="checkbox-{{ s_email.id }}" type="checkbox"
-                                                        onchange="appendEmailChecklist(event, '{{ s_email.email }}')"
+                                                        onchange="appendEmailChecklist(event, '{{ s_email.id }}', '{{ s_email.email }}')"
                                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                 </div>
                                             </td>
@@ -226,6 +226,43 @@
 
     <!-- Custom JS Script -->
     <script src="{% static 'js/newsletter/email-modal-toggle.js' %}"></script>
+
+    <script>
+        let selectedEmailList = [];
+
+        function appendEmailChecklist(event, checkbox_id, email) {
+            let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
+            console.log('selected email:', email);
+            // console.log('checkbox (checked)', checkbox.checked);
+            // console.log('event', event);
+            // selectedEmailList.push(email);
+            // console.log('selectedEmailList', selectedEmailList);
+
+            if (checkbox.checked) {
+                // console.log(email.toLowerCase());
+                let email_lower = email.toLowerCase();
+                console.log('selected email (lowercase):', email);
+                // console.log('array length:', selectedEmailList.length);
+                if (selectedEmailList.length) {
+                    // check for duplicate email before adding to selected-email-list
+                    // console.log("not empty");
+                    // let duplicates = selectedEmailList.filter((item, index) => selectedEmailList.indexOf(item) !== index);
+                    const matched = selectedEmailList.some(({ email }) => email === email_lower);
+                    // console.log("matched:", matched);
+                    if (!matched) {
+                        // console.log("no match found, can add to selected-email-list");
+                        selectedEmailList.push({ 'email': email_lower });
+                    }
+                } else {
+                    // add email to the array;
+                    // console.log("empty");
+                    // selectedEmailList.push(email_lower);
+                    selectedEmailList.push({ 'email': email_lower });
+                }
+            }
+            console.log('selectedEmailList:', selectedEmailList);
+        }
+    </script>
 </body>
 
 </html>

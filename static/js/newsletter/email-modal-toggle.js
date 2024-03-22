@@ -3,8 +3,6 @@ const modal = document.querySelector('.newsletter-email-modal');
 // const openModalBtn = document.querySelector('#open-modal-btn');
 const closeModalBtn = document.querySelector('.modal-close-btn');
 
-let selectedEmailList = [];
-
 // console.log('modal', modal);
 // console.log('openModalBtn', openModalBtn);
 // console.log('closeModalBtn', closeModalBtn);
@@ -22,12 +20,6 @@ function closeModal() {
     modal.classList.remove('flex', 'items-center', 'justify-center');
     modal.classList.add('hidden');
     modal.setAttribute('aria-hidden', 'true');
-}
-
-function appendEmailChecklist(event, email) {
-    console.log('event', event);
-    selectedEmailList.push(email);
-    console.log('selectedEmailList', selectedEmailList);
 }
 
 // Event listener to open the modal when the button is clicked

@@ -16,6 +16,7 @@ class NewsletterPage(View):
 class newsletterSubscription(View):
 
     def post(self, request):
+        # TODO: Check for existing subscribed-email before adding same email
         Newsletter.objects.create(email=request.POST.get('email'))
         referer_url = request.META.get('HTTP_REFERER')
         if referer_url:
