@@ -106,12 +106,13 @@
                                             <td class="w-4 p-4">
                                                 <div class="flex items-center">
                                                     <input id="checkbox-{{ s_email.id }}" type="checkbox"
-                                                        onchange="appendEmailChecklist(event, '{{ s_email.id }}', '{{ s_email.email }}')"
+                                                        onchange="appendEmailChecklist('{{ s_email.id }}', '{{ s_email.email }}')"
                                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                 </div>
                                             </td>
                                             <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                onclick="emailDivHandler('{{ s_email.id }}', '{{ s_email.email }}')"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap cursor-pointer">
                                                 {{ s_email.email }}
                                             </th>
                                             <td class="flex items-center ps-28 pe-6 py-4">
@@ -230,9 +231,21 @@
     <script>
         let selectedEmailList = [];
 
-        function appendEmailChecklist(event, checkbox_id, email) {
+        function emailDivHandler(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
-            console.log('selected email:', email);
+            // console.log(checkbox.checked);
+            if (!checkbox.checked) {
+                // console.log("checkbox is not checked!");
+                checkbox.checked = true;
+                appendEmailChecklist(checkbox_id, email);
+            } else {
+                checkbox.checked = false;
+            }
+        }
+
+        function appendEmailChecklist(checkbox_id, email) {
+            let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
+            // console.log('selected email:', email);
             // console.log('checkbox (checked)', checkbox.checked);
             // console.log('event', event);
             // selectedEmailList.push(email);
