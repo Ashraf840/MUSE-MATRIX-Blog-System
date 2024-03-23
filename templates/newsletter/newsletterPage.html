@@ -74,7 +74,7 @@
                                                     hover:bg-gray-100 hover:text-gray-900 focus:z-10 
                                                     focus:ring-4 focus:ring-gray-100"
                                                     onclick="openModal('{{ s_email.id }}')">
-                                                    Send Email to Selected
+                                                    Send Email
                                                 </button>
                                             </th>
                                             <!-- <th scope="col" class="ps-28 pe-6 py-3">
@@ -95,9 +95,9 @@
                                             <th scope="col" class="px-6 py-3">
                                                 Email
                                             </th>
-                                            <th scope="col" class="ps-28 pe-6 py-3">
+                                            <!-- <th scope="col" class="ps-28 pe-6 py-3">
                                                 Action
-                                            </th>
+                                            </th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -117,13 +117,13 @@
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap cursor-pointer">
                                                 {{ s_email.email }}
                                             </th>
-                                            <td class="flex items-center ps-28 pe-6 py-4">
+                                            <!-- <td class="flex items-center ps-28 pe-6 py-4">
                                                 <button type="button" id="open-modal-btn"
                                                     onclick="openModal('{{ s_email.id }}')"
                                                     class="open-modal-btn-{{s_email.id}} py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-500 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100">
                                                     Send Email {{ s_email.id }}
                                                 </button>
-                                            </td>
+                                            </td> -->
                                         </tr>
                                         {% endfor %}
                                     </tbody>
