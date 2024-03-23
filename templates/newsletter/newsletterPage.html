@@ -87,6 +87,7 @@
                                             <th scope="col" class="p-4">
                                                 <div class="flex items-center">
                                                     <input id="checkbox-all-search" type="checkbox"
+                                                        onchange="selectAllCheckbox()"
                                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                     <label for="checkbox-all-search" class="sr-only">checkbox</label>
                                                 </div>
@@ -106,8 +107,9 @@
                                             <td class="w-4 p-4">
                                                 <div class="flex items-center">
                                                     <input id="checkbox-{{ s_email.id }}" type="checkbox"
-                                                        onchange="appendEmailChecklist('{{ s_email.id }}', '{{ s_email.email }}')"
-                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        value="{{ s_email.email }}"
+                                                        onchange="appendRemoveEmailChecklist('{{ s_email.id }}', '{{ s_email.email }}')"
+                                                        class="checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                 </div>
                                             </td>
                                             <th scope="row"
@@ -231,20 +233,53 @@
     <script>
         let selectedEmailList = [];
 
+        function selectAllCheckbox() {
+            let checkbox_all = document.querySelector(`#checkbox-all-search`);
+            if (checkbox_all.checked) {
+                console.log("Checkbox_all checked");
+                // TODO: Check all the checkboxes & add all the emails to selected-email-list
+                let checkboxes = document.querySelectorAll(".checkbox")
+                // console.log(checkboxes.length);
+                checkboxes.forEach(element => {
+                    // console.log(element.value);
+                    // console.log(element.id);
+                    let checkbox = document.querySelector(`#${element.id}`);
+                    checkbox.checked = true;
+                    // console.log("checkbox element:", checkbox);
+                    const checkbox_id = parseInt(`${element.id}`.match(/\d+/), 10);
+                    // console.log("checkbox id:", checkbox_id);
+                    appendRemoveEmailChecklist(checkbox_id, element.value);
+                });
+                console.log('selectedEmailList (select-all):', selectedEmailList);
+            } else {
+                console.log("Checkbox_all un-checked");
+                // TODO: Un-check all the checkboxes & remove all the emails from selected-email-list
+                let checkboxes = document.querySelectorAll(".checkbox")
+                // console.log(checkboxes.length);
+                checkboxes.forEach(element => {
+                    let checkbox = document.querySelector(`#${element.id}`);
+                    checkbox.checked = false;
+                    const checkbox_id = parseInt(`${element.id}`.match(/\d+/), 10);
+                    appendRemoveEmailChecklist(checkbox_id, element.value);
+                });
+                console.log('selectedEmailList (un-select-all):', selectedEmailList);
+            }
+        }
+
         function emailDivHandler(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
             // console.log(checkbox.checked);
             if (!checkbox.checked) {
                 // console.log("checkbox is not checked!");
                 checkbox.checked = true;
-                appendEmailChecklist(checkbox_id, email);
+                appendRemoveEmailChecklist(checkbox_id, email);
             } else {
                 checkbox.checked = false;
-                appendEmailChecklist(checkbox_id, email);
+                appendRemoveEmailChecklist(checkbox_id, email);
             }
         }
 
-        function appendEmailChecklist(checkbox_id, email) {
+        function appendRemoveEmailChecklist(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
             // console.log('selected email:', email);
             // console.log('checkbox (checked)', checkbox.checked);
