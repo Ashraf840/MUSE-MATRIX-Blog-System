@@ -236,41 +236,29 @@
         function selectAllCheckbox() {
             let checkbox_all = document.querySelector(`#checkbox-all-search`);
             if (checkbox_all.checked) {
-                console.log("Checkbox_all checked");
                 // TODO: Check all the checkboxes & add all the emails to selected-email-list
                 let checkboxes = document.querySelectorAll(".checkbox")
-                // console.log(checkboxes.length);
                 checkboxes.forEach(element => {
-                    // console.log(element.value);
-                    // console.log(element.id);
                     let checkbox = document.querySelector(`#${element.id}`);
                     checkbox.checked = true;
-                    // console.log("checkbox element:", checkbox);
                     const checkbox_id = parseInt(`${element.id}`.match(/\d+/), 10);
-                    // console.log("checkbox id:", checkbox_id);
                     appendRemoveEmailChecklist(checkbox_id, element.value);
                 });
-                console.log('selectedEmailList (select-all):', selectedEmailList);
             } else {
-                console.log("Checkbox_all un-checked");
                 // TODO: Un-check all the checkboxes & remove all the emails from selected-email-list
                 let checkboxes = document.querySelectorAll(".checkbox")
-                // console.log(checkboxes.length);
                 checkboxes.forEach(element => {
                     let checkbox = document.querySelector(`#${element.id}`);
                     checkbox.checked = false;
                     const checkbox_id = parseInt(`${element.id}`.match(/\d+/), 10);
                     appendRemoveEmailChecklist(checkbox_id, element.value);
                 });
-                console.log('selectedEmailList (un-select-all):', selectedEmailList);
             }
         }
 
         function emailDivHandler(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
-            // console.log(checkbox.checked);
             if (!checkbox.checked) {
-                // console.log("checkbox is not checked!");
                 checkbox.checked = true;
                 appendRemoveEmailChecklist(checkbox_id, email);
             } else {
@@ -281,50 +269,25 @@
 
         function appendRemoveEmailChecklist(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
-            // console.log('selected email:', email);
-            // console.log('checkbox (checked)', checkbox.checked);
-            // console.log('event', event);
-            // selectedEmailList.push(email);
-            // console.log('selectedEmailList', selectedEmailList);
             let email_lower = email.toLowerCase();
 
             if (checkbox.checked) {
                 // Add to selected-email-list
-                // console.log(email.toLowerCase());
-                // console.log('selected email (lowercase):', email);
-                // console.log('array length:', selectedEmailList.length);
                 if (selectedEmailList.length) {
                     // check for duplicate email before adding to selected-email-list
-                    // console.log("not empty");
-                    // let duplicates = selectedEmailList.filter((item, index) => selectedEmailList.indexOf(item) !== index);
                     const matched = selectedEmailList.some(({ email }) => email === email_lower);
-                    // console.log("matched:", matched);
                     if (!matched) {
-                        // console.log("no match found, can add to selected-email-list");
                         selectedEmailList.push({ 'email': email_lower });
                     }
                 } else {
                     // add email to the array;
-                    // console.log("empty");
-                    // selectedEmailList.push(email_lower);
                     selectedEmailList.push({ 'email': email_lower });
                 }
             } else {
                 // Remove from selected-email-list
-                // console.log("email index:", selectedEmailList.indexOf(email_lower));
-                // for (const key in selectedEmailList) {
-                //     if (selectedEmailList[key] === email_lower) {
-                //         delete selectedEmailList[key];
-                //         break; // Stop after removing the first matching value
-                //     }
-                // }
-                // console.log("Remove email from list:", email_lower);
-
                 const filteredList = selectedEmailList.filter(item => item.email !== email_lower);
-                // console.log('filteredList:', filteredList);
                 selectedEmailList = filteredList
             }
-            console.log('selectedEmailList:', selectedEmailList);
         }
     </script>
 </body>
