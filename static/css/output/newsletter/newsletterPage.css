@@ -773,12 +773,6 @@ video {
   cursor: pointer;
 }
 
-.select-all{
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
-}
-
 .resize{
   resize: both;
 }
@@ -933,11 +927,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .p-1{
@@ -1124,10 +1113,6 @@ video {
 
 .uppercase{
   text-transform: uppercase;
-}
-
-.lowercase{
-  text-transform: lowercase;
 }
 
 .text-blue-600{

@@ -232,12 +232,17 @@
 
     <script>
         let selectedEmailList = [];
+        let checkbox_all = document.querySelector(`#checkbox-all-search`);
+        let checkboxes = document.querySelectorAll(".checkbox");
+        let checkbox_checked_count_tracker = 0;
 
+        /**
+         * This function is responsible for selecting/deselecting all other checkboxes including the select-all-checkbox by this checkbox itself.
+         */
         function selectAllCheckbox() {
-            let checkbox_all = document.querySelector(`#checkbox-all-search`);
             if (checkbox_all.checked) {
+                checkbox_checked_count_tracker = checkboxes.length;
                 // TODO: Check all the checkboxes & add all the emails to selected-email-list
-                let checkboxes = document.querySelectorAll(".checkbox")
                 checkboxes.forEach(element => {
                     let checkbox = document.querySelector(`#${element.id}`);
                     checkbox.checked = true;
@@ -245,8 +250,8 @@
                     appendRemoveEmailChecklist(checkbox_id, element.value);
                 });
             } else {
+                checkbox_checked_count_tracker = 0;
                 // TODO: Un-check all the checkboxes & remove all the emails from selected-email-list
-                let checkboxes = document.querySelectorAll(".checkbox")
                 checkboxes.forEach(element => {
                     let checkbox = document.querySelector(`#${element.id}`);
                     checkbox.checked = false;
@@ -254,6 +259,7 @@
                     appendRemoveEmailChecklist(checkbox_id, element.value);
                 });
             }
+            // console.log("selectedEmailList:", selectedEmailList);
         }
 
         function emailDivHandler(checkbox_id, email) {
@@ -267,12 +273,21 @@
             }
         }
 
+        function dynamicallySelectAllCheckbox() {
+            checkbox_checked_count_tracker += 1;
+            if (checkbox_checked_count_tracker === checkboxes.length) {
+                checkbox_all.checked = true;
+                console.log("Check select-all-checkbox");
+            }
+        }
+
         function appendRemoveEmailChecklist(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
             let email_lower = email.toLowerCase();
 
+
             if (checkbox.checked) {
-                // Add to selected-email-list
+                // Add to selected-email-list [Duplicate check]
                 if (selectedEmailList.length) {
                     // check for duplicate email before adding to selected-email-list
                     const matched = selectedEmailList.some(({ email }) => email === email_lower);
@@ -283,11 +298,34 @@
                     // add email to the array;
                     selectedEmailList.push({ 'email': email_lower });
                 }
+
+                // Check if select-all-checkbox is unchecked (so that it can be checked after all the checkboxes are checked)
+                if (!checkbox_all.checked) {
+                    // console.log("select-all-checkbox is UNCHECKED");
+                    // console.log("All checkbox count:", checkboxes.length);
+                    dynamicallySelectAllCheckbox();
+                }
             } else {
                 // Remove from selected-email-list
                 const filteredList = selectedEmailList.filter(item => item.email !== email_lower);
                 selectedEmailList = filteredList
+                // Check if the select-all-checkbox is checked; 
+                // then write a function to which will check the length of "selectedEmailList" list of objects.
+                // When the list gets empty, then uncheck the select-all-checkbox.
+                if (checkbox_all.checked) {
+                    // // [Wrong Flow] console.log("select-all-checkbox is CHECKED");
+                    // if (selectedEmailList.length) {
+                    //     // console.log("selectedEmailList.length:", selectedEmailList.length);
+                    // } else {
+                    //     console.log("Uncehck the select-all-checkbox");
+                    //     checkbox_all.checked = false;
+                    // }
+                    checkbox_all.checked = false;
+                }
+                checkbox_checked_count_tracker -= 1;
+                // console.log("checkbox_checked_count_tracker:", checkbox_checked_count_tracker);
             }
+            console.log("selectedEmailList:", selectedEmailList);
         }
     </script>
 </body>
