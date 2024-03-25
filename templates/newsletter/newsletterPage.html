@@ -237,11 +237,11 @@
         let checkbox_checked_count_tracker = 0;
 
         /**
-         * This function is responsible for selecting/deselecting all other checkboxes including the select-all-checkbox by this checkbox itself.
+         * Select/deselect all checkboxes at once including the select-all-checkbox by the select-all-checkbox itself.
          */
         function selectAllCheckbox() {
             if (checkbox_all.checked) {
-                checkbox_checked_count_tracker = checkboxes.length;
+                checkbox_checked_count_tracker = checkboxes.length;     // Assign the count-tracker to the length of all checkboxes, since all of them are checked
                 // TODO: Check all the checkboxes & add all the emails to selected-email-list
                 checkboxes.forEach(element => {
                     let checkbox = document.querySelector(`#${element.id}`);
@@ -250,7 +250,7 @@
                     appendRemoveEmailChecklist(checkbox_id, element.value);
                 });
             } else {
-                checkbox_checked_count_tracker = 0;
+                checkbox_checked_count_tracker = 0;     // Make the count-tracker to zero, since all the checkboxes are unchecked
                 // TODO: Un-check all the checkboxes & remove all the emails from selected-email-list
                 checkboxes.forEach(element => {
                     let checkbox = document.querySelector(`#${element.id}`);
@@ -262,6 +262,9 @@
             // console.log("selectedEmailList:", selectedEmailList);
         }
 
+        /**
+         * Checked each checkbox individually by clicking on the email names.
+         */
         function emailDivHandler(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
             if (!checkbox.checked) {
@@ -273,19 +276,25 @@
             }
         }
 
+        /**
+         * Auto checked the select-all-checkbox after selecting all the unchecked checkbox
+         */
         function dynamicallySelectAllCheckbox() {
-            checkbox_checked_count_tracker += 1;
+            checkbox_checked_count_tracker += 1;    // Increase the count by one while checking every unchecked checkbox
             if (checkbox_checked_count_tracker === checkboxes.length) {
                 checkbox_all.checked = true;
                 console.log("Check select-all-checkbox");
             }
         }
 
+        /**
+         * Checked each checkbox individually by their specific checkbox-ids
+         */
         function appendRemoveEmailChecklist(checkbox_id, email) {
             let checkbox = document.querySelector(`#checkbox-${checkbox_id}`);
             let email_lower = email.toLowerCase();
 
-
+            // If the current checkbox gets checked, then append the passing email to the "selectedEmailList" list variable
             if (checkbox.checked) {
                 // Add to selected-email-list [Duplicate check]
                 if (selectedEmailList.length) {
@@ -299,31 +308,22 @@
                     selectedEmailList.push({ 'email': email_lower });
                 }
 
-                // Check if select-all-checkbox is unchecked (so that it can be checked after all the checkboxes are checked)
+                // Check if select-all-checkbox is unchecked, so that it can be checked after all the checkboxes are checked individually by invoking this function
                 if (!checkbox_all.checked) {
-                    // console.log("select-all-checkbox is UNCHECKED");
-                    // console.log("All checkbox count:", checkboxes.length);
                     dynamicallySelectAllCheckbox();
                 }
-            } else {
-                // Remove from selected-email-list
+            }
+            // If the current checkbox gets unchecked, then remove that passing email from the "selectedEmailList" list variable
+            else {
+                // Remove from selected-email-list by filtering the email-items from the passing email
                 const filteredList = selectedEmailList.filter(item => item.email !== email_lower);
                 selectedEmailList = filteredList
-                // Check if the select-all-checkbox is checked; 
-                // then write a function to which will check the length of "selectedEmailList" list of objects.
-                // When the list gets empty, then uncheck the select-all-checkbox.
+                // Check if the select-all-checkbox is checked, then uncheck this checkbox since one of the checkboxes from the table gets unchecked.
+                // Scenario: User checked all the checkboxes, then uncheck certain checkbox(es). Similarly at the time of unchecking any checkbox, unckeck the select-all-checkbox also.
                 if (checkbox_all.checked) {
-                    // // [Wrong Flow] console.log("select-all-checkbox is CHECKED");
-                    // if (selectedEmailList.length) {
-                    //     // console.log("selectedEmailList.length:", selectedEmailList.length);
-                    // } else {
-                    //     console.log("Uncehck the select-all-checkbox");
-                    //     checkbox_all.checked = false;
-                    // }
                     checkbox_all.checked = false;
                 }
-                checkbox_checked_count_tracker -= 1;
-                // console.log("checkbox_checked_count_tracker:", checkbox_checked_count_tracker);
+                checkbox_checked_count_tracker -= 1;    // Decrease the count by one while unchecking every checked checkbox
             }
             console.log("selectedEmailList:", selectedEmailList);
         }
