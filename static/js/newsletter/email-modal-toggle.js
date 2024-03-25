@@ -8,11 +8,39 @@ const closeModalBtn = document.querySelector('.modal-close-btn');
 // console.log('closeModalBtn', closeModalBtn);
 
 // Function to open the modal
-function openModal(id) {
-    console.log('btn id', id);
-    modal.classList.remove('hidden');
-    modal.classList.add('flex', 'items-center', 'justify-center');
-    modal.setAttribute('aria-hidden', 'false');
+function openModal() {
+    let recipient = document.querySelector('#recipient');
+    recipient.value = '';
+    // Check if "selectedEmailList" is not empty before opening the email-send-modal
+    if (selectedEmailList.length) {
+        // Open/Show email-send-modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex', 'items-center', 'justify-center');
+        modal.setAttribute('aria-hidden', 'false');
+
+        // Put comma after appending each email
+        let email_str = '';
+        selectedEmailList.forEach((s_email, index, array) => {
+            if (index === array.length - 1) {
+                // console.log('Last element:', s_email.email);
+                email_str += s_email.email;
+            } else {
+                email_str += s_email.email + ', ';
+            }
+        });
+        // console.log(email_str);
+        // Append all the selected emails into the recipient-input-field
+        recipient.value = email_str;
+    } else {
+        console.log("Please select at least one email address");
+        // Show a sweet-alert message for not selecting any email
+        Swal.fire({
+            title: 'Error!',
+            text: 'Select at least one email address!',
+            icon: 'error',
+            confirmButtonText: 'Cancel'
+        })
+    }
 }
 
 // Function to close the modal
