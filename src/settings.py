@@ -130,3 +130,11 @@ GRAPH_MODELS ={
     'all_applications': True,
     'graph_models': True,
 }
+
+# Email service configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'python4dia@gmail.com'
+EMAIL_HOST_PASSWORD = 'wyyyryzlymjicrhw'
+EMAIL_PORT = 587

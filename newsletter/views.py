@@ -3,10 +3,29 @@ from django.http import HttpResponseRedirect
 from .models import Newsletter
 from django.contrib import messages
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 
 class NewsletterPage(View):
 
     template_name = 'newsletter/newsletterPage.html'
+
+    def send_email(self, subject, from_email, to_email):
+        text_content = render_to_string(
+            'email-templates/account_creation_info.txt', 
+        )
+        html_content = render_to_string(
+            'email-templates/account_creation_info.html', 
+        )
+        send_mail(
+            subject=subject,
+            message= text_content,
+            from_email=f'{from_email}',
+            recipient_list=to_email,
+            html_message=html_content,
+            fail_silently=False
+        )
 
     def get_subscribed_emails(self):
         return Newsletter.objects.all()
@@ -27,6 +46,8 @@ class NewsletterPage(View):
         subject=request.POST.get('subject')
         message=request.POST.get('email-body')
         # Send email
+        from_mail = "python4dia@gmail.com"
+        self.send_email(subject=subject, from_email=from_mail, to_email=email_list)
         # Render the newsletter page
         subscribed_emails = self.get_subscribed_emails()
         context = {
