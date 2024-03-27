@@ -5,6 +5,18 @@ from django.contrib import messages
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.core.mail import EmailMultiAlternatives
+import threading
+
+
+# Multi-threading
+class EmailThread(threading.Thread):
+    def __init__(self, msg):
+        self.email = msg
+        threading.Thread.__init__(self)
+
+    def run(self):
+        self.email.send()
 
 
 class NewsletterPage(View):
@@ -12,20 +24,16 @@ class NewsletterPage(View):
     template_name = 'newsletter/newsletterPage.html'
 
     def send_email(self, subject, from_email, to_email):
+        # TODO: make use of dynamic content
         text_content = render_to_string(
             'email-templates/account_creation_info.txt', 
         )
         html_content = render_to_string(
             'email-templates/account_creation_info.html', 
         )
-        send_mail(
-            subject=subject,
-            message= text_content,
-            from_email=f'{from_email}',
-            recipient_list=to_email,
-            html_message=html_content,
-            fail_silently=False
-        )
+        msg = EmailMultiAlternatives(subject=subject, body=text_content, from_email=from_email, to=to_email)
+        msg.attach_alternative(html_content, "text/html")
+        EmailThread(msg).start()
 
     def get_subscribed_emails(self):
         return Newsletter.objects.all()
@@ -44,7 +52,7 @@ class NewsletterPage(View):
             email_list = [email.strip() for email in email_addresses.split(',')] # split on comma & then strip the leading & trailing whitespaces
         print("email_list:", email_list)
         subject=request.POST.get('subject')
-        message=request.POST.get('email-body')
+        text_message=request.POST.get('email-body')
         # Send email
         from_mail = "python4dia@gmail.com"
         self.send_email(subject=subject, from_email=from_mail, to_email=email_list)
