@@ -239,6 +239,20 @@
         let checkboxes = document.querySelectorAll(".checkbox");
         let checkbox_checked_count_tracker = 0;
 
+        // Show sweet alert message if email is sent successfully
+        let email_send_status = `{{ email_send_status }}`
+        if (email_send_status === "email-send-successful") {
+            setTimeout(function () {
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }, 600)
+        }
+
         /**
          * Select/deselect all checkboxes at once including the select-all-checkbox by the select-all-checkbox itself.
          */

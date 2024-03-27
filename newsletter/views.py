@@ -11,6 +11,7 @@ import threading
 
 # Multi-threading
 class EmailThread(threading.Thread):
+    
     def __init__(self, msg):
         self.email = msg
         threading.Thread.__init__(self)
@@ -55,11 +56,13 @@ class NewsletterPage(View):
         text_message=request.POST.get('email-body')
         # Send email
         from_mail = "python4dia@gmail.com"
-        self.send_email(subject=subject, from_email=from_mail, to_email=email_list)
+        # self.send_email(subject=subject, from_email=from_mail, to_email=email_list)
         # Render the newsletter page
         subscribed_emails = self.get_subscribed_emails()
+        # TODO: Context will vary on successfully sending email to users. On success sending include different message in context
         context = {
-            'subscribed_emails': subscribed_emails
+            'subscribed_emails': subscribed_emails,
+            'email_send_status': "email-send-successful"
         }
         return render(request, self.template_name , context=context)
 
